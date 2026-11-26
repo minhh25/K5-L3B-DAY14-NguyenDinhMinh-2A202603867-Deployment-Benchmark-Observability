@@ -58,6 +58,10 @@ subprocess.run(['git','diff','--check'],cwd=root,check=True)
 deployment_path=root/'reports/public-deployment.json'
 deployed=deployment_path.exists()
 cloud_images=['dashboard.png','running.png','test.png']
+for name in cloud_images:
+    image=root/'screenshots'/name
+    if image.exists():
+        require(image.read_bytes().startswith(b'\x89PNG\r\n\x1a\n'), 'Cloud PNG: '+name)
 if deployed:
     deployment=read('reports/public-deployment.json')
     codes={item['name']:item['status'] for item in deployment['checks']}
@@ -68,5 +72,7 @@ if deployed:
     'public_url_verified':deployed,
     'authenticated_check_source':'user_supplied_swagger_response' if deployed else None,
     'cloud_screenshots_complete':all((root/'screenshots'/name).exists() for name in cloud_images),
+    'cloud_screenshots_pending':['screenshots/'+name for name in cloud_images
+                                 if not (root/'screenshots'/name).exists()],
     'github_workflows_status_verified':False},indent=2,ensure_ascii=False))
 print(f'{len(checks)} audit checks passed. Render deployed: {deployed}; see cloud screenshot status in JSON.')

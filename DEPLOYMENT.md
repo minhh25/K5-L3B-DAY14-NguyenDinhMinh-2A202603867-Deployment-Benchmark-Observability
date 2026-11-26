@@ -1,6 +1,6 @@
 # Deployment — Day 14
 
-**Trạng thái:** agent Part 6 đã deploy lên Render. Health, readiness và chặn request thiếu key đã được kiểm tra trực tiếp; chủ repo đã cung cấp kết quả Swagger có key trả 200. Bằng chứng đã che secret: [public-deployment.json](reports/public-deployment.json). Còn bổ sung ba ảnh cloud để hoàn tất bài nộp.
+**Trạng thái:** agent Part 6 đã deploy lên Render. Health, readiness và chặn request thiếu key đã được kiểm tra trực tiếp; chủ repo đã cung cấp kết quả Swagger có key trả 200. Bằng chứng đã che secret: [public-deployment.json](reports/public-deployment.json). Đã lưu ảnh Postman 200 và Render Live/log; còn ảnh tổng quan service `screenshots/dashboard.png` để hoàn tất bài nộp.
 
 ## Cấu hình Render
 
@@ -59,7 +59,7 @@ curl -sS -o /dev/null -w '%{http_code}\n' -X POST "$BASE/ask" \
 
 Kết quả mong đợi lần lượt: **200, 200, 401, 200**. Nếu `/ready` trả 503, kiểm tra URL, vùng, quyền kết nối Redis và log. `/health` vẫn 200 khi Redis không kết nối được để phân biệt liveness/readiness.
 
-Sau khi thành công, bổ sung `screenshots/dashboard.png`, `screenshots/running.png`, `screenshots/test.png` từ Render và các phép thử thật. Service đã deploy; ba ảnh này vẫn chờ chủ repo bổ sung. Khi chụp Swagger, ẩn phần Curl hoặc che giá trị X-API-Key. Không commit ảnh Environment có secret.
+Ảnh gốc do chủ repo cung cấp đã được lưu: [Render Live và log](screenshots/running.png), [Postman POST /ask trả 200](screenshots/test.png). Còn [ảnh tổng quan service](screenshots/dashboard.png) cần bổ sung. Ảnh Live ghi nhận bản deploy ứng dụng từ commit 30796cb; các commit sau chỉ cập nhật tài liệu/bằng chứng. Dòng GET/HEAD `/` trả 404 trong log do app không khai báo route gốc; `/health`, `/ready` và `/ask` được kiểm tra riêng. Không commit ảnh Environment hoặc Curl hiển thị secret.
 
 ## Railway và Cloud Run
 

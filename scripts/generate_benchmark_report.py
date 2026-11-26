@@ -24,7 +24,12 @@ def main():
     env=read('environment.json')
     meta=read('benchmark-run.json')
     deployed=(R/'public-deployment.json').exists()
-    deployment_note=('Agent Part 6 đã deploy Render; bốn kết quả public nằm trong reports/public-deployment.json, ba ảnh cloud còn chờ bổ sung.' if deployed else 'Deploy Render đang chờ chủ repo.')
+    missing_cloud=[name for name in ('dashboard.png','running.png','test.png')
+                   if not (ROOT/'screenshots'/name).exists()]
+    cloud_note=('còn thiếu '+', '.join('screenshots/'+name for name in missing_cloud)
+                if missing_cloud else 'đã có đủ ba ảnh cloud')
+    deployment_note=('Agent Part 6 đã deploy Render; bốn kết quả public nằm trong reports/public-deployment.json; '+cloud_note+'.'
+                     if deployed else 'Deploy Render đang chờ chủ repo.')
     local_time=datetime.fromisoformat(meta['started_utc']).astimezone(ZoneInfo('Asia/Ho_Chi_Minh'))
     v1,v2,fixed=[read(name) for name in ['eval_v1.json','eval_v2.json','eval_v2_fixed.json']]
     ab=read('chaos-AB.json')

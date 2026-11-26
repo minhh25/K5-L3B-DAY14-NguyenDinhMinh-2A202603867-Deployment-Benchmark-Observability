@@ -4,7 +4,7 @@
 **Ngày chạy:** 26/11/2026 13:41 (GMT+7; timestamp gốc UTC trong JSON).
 **Môi trường:** Apple M3, RAM 16 GiB; macOS-27.0.1-arm64-arm-64bit; Python 3.11.4. Docker Desktop 27.5.1, 8 CPU / 7.65 GiB RAM cho VM. Agent observability giới hạn 0.5 CPU / 256 MiB mỗi container, một worker/container.
 
-Mọi số trong bảng được sinh từ JSON/CSV đính kèm bởi `scripts/generate_benchmark_report.py`. Chi phí là chi phí mô phỏng, không phải hóa đơn API. Bảng local dùng lượt cuối trên code có đầy đủ histogram độ dài câu hỏi, sau khi dừng stack Docker gây tải; lượt đầu chạy trong lúc build Docker được giữ nguyên ở `reports/initial-benchmark/` để thấy ảnh hưởng môi trường, không trộn số hai lượt. Đo trên máy dùng chung, một lượt mỗi cấu hình; không coi đây là cam kết capacity hoặc bằng chứng latency của LLM thật. Agent Part 6 đã deploy Render; bốn kết quả public nằm trong reports/public-deployment.json, ba ảnh cloud còn chờ bổ sung. Part 7 là stack chạy local độc lập với Part 6.
+Mọi số trong bảng được sinh từ JSON/CSV đính kèm bởi `scripts/generate_benchmark_report.py`. Chi phí là chi phí mô phỏng, không phải hóa đơn API. Bảng local dùng lượt cuối trên code có đầy đủ histogram độ dài câu hỏi, sau khi dừng stack Docker gây tải; lượt đầu chạy trong lúc build Docker được giữ nguyên ở `reports/initial-benchmark/` để thấy ảnh hưởng môi trường, không trộn số hai lượt. Đo trên máy dùng chung, một lượt mỗi cấu hình; không coi đây là cam kết capacity hoặc bằng chứng latency của LLM thật. Agent Part 6 đã deploy Render; bốn kết quả public nằm trong reports/public-deployment.json; còn thiếu screenshots/dashboard.png. Part 7 là stack chạy local độc lập với Part 6.
 
 ## 1. SLO của agent
 
