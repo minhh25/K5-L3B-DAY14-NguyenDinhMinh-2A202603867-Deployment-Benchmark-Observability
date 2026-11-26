@@ -9,6 +9,166 @@
       "passed": true
     },
     {
+      "check": "SUBMISSION required file: MISSION_ANSWERS.md",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: DEPLOYMENT.md",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: BENCHMARK_REPORT.md",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/app/main.py",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/app/config.py",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/app/auth.py",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/app/redis_client.py",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/app/rate_limiter.py",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/app/cost_guard.py",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/Dockerfile",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/docker-compose.yml",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/.dockerignore",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: 06-lab-complete/.env.example",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: reports/load_v2_c1.json",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: reports/load_v2_c10.json",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: reports/load_v2_c50.json",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: reports/load_v2_c100.json",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: reports/load_v2_slow_0.json",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: reports/load_v2_slow_0.03.json",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: reports/load_v2_slow_0.1.json",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: reports/eval_v1.json",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: reports/eval_v2.json",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: reports/eval_v2_fixed.json",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: benchmark-results/scale_1_stats.csv",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION required file: benchmark-results/scale_3_stats.csv",
+      "passed": true
+    },
+    {
+      "check": "Deploy config present in Part 6",
+      "passed": true
+    },
+    {
+      "check": "Mission answers contain Part 1-5 and AI log",
+      "passed": true
+    },
+    {
+      "check": "Locust CSV has measured /ask requests: benchmark-results/scale_1_stats.csv",
+      "passed": true
+    },
+    {
+      "check": "Locust CSV has measured /ask requests: benchmark-results/scale_3_stats.csv",
+      "passed": true
+    },
+    {
+      "check": "Root report matches CP7 original: load_v2_c1",
+      "passed": true
+    },
+    {
+      "check": "Root report matches CP7 original: load_v2_c10",
+      "passed": true
+    },
+    {
+      "check": "Root report matches CP7 original: load_v2_c50",
+      "passed": true
+    },
+    {
+      "check": "Root report matches CP7 original: load_v2_c100",
+      "passed": true
+    },
+    {
+      "check": "Root report matches CP7 original: load_v2_slow_0",
+      "passed": true
+    },
+    {
+      "check": "Root report matches CP7 original: load_v2_slow_0.03",
+      "passed": true
+    },
+    {
+      "check": "Root report matches CP7 original: load_v2_slow_0.1",
+      "passed": true
+    },
+    {
+      "check": "Root report matches CP7 original: eval_v1",
+      "passed": true
+    },
+    {
+      "check": "Root report matches CP7 original: eval_v2",
+      "passed": true
+    },
+    {
+      "check": "Root report matches CP7 original: eval_v2_fixed",
+      "passed": true
+    },
+    {
       "check": "300 requests, concurrency 1",
       "passed": true
     },
@@ -105,71 +265,7 @@
       "passed": true
     },
     {
-      "check": "No local key in 06-lab-complete/tests/test_guards.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 05-scaling-reliability/production/utils/mock_llm.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_c100.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 05-scaling-reliability/README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/submission-audit.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/cp2-container-http.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/environment.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 02-docker/production/requirements.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in benchmark-results/scale_3_exceptions.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/observability-cleanup.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_slow_0.03.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in scripts/setup_local.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_c50.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 05-scaling-reliability/production/docker-compose.yml",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_slow_0.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/observability-build.txt",
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_slow_0.03.json",
       "passed": true
     },
     {
@@ -177,283 +273,7 @@
       "passed": true
     },
     {
-      "check": "No local key in benchmark-results/scale_1_stats_history.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/grafana/provisioning/datasources/datasources.yml",
-      "passed": true
-    },
-    {
-      "check": "No local key in RULES.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/develop-metrics.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/app/rate_limiter.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in MISSION_ANSWERS.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/benchmark-run.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/render.yaml",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/benchmark-execution.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/load_v2_slow_0.1.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/load_v2_c100.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 05-scaling-reliability/production/test_stateless.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/observability-pull.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/load_v2_c1.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in INSTRUCTOR_GUIDE.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in 01-localhost-vs-production/develop/app.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/grafana/dashboards/agent-overview.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in DAY14_DELIVERY_CHECKLIST.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in 05-scaling-reliability/develop/requirements.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/cp4-graceful-http.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_c10.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in utils/mock_llm.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/cp3-api-key-http.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 02-docker/multi-stages/README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_slow_0.03.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_3_exceptions.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/jaeger-error-trace.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in benchmark-results/scale_3_stats_history.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in 03-cloud-deployment/railway/app.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/jaeger-slow-trace.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 03-cloud-deployment/production-cloud-run/service.yaml",
-      "passed": true
-    },
-    {
-      "check": "No local key in DEPLOYMENT.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in 02-docker/README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_c50.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/observability-agent.log",
-      "passed": true
-    },
-    {
-      "check": "No local key in 04-api-gateway/develop/utils/mock_llm.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/benchmark-run.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/observability-alerts-execution.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_3_stats.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/locust/locustfile.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in SUBMISSION.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in QUICK_START.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in 04-api-gateway/production/utils/mock_llm.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 04-api-gateway/production/cost_guard.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in scripts/final_audit.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/prometheus/alert_rules.yml",
-      "passed": true
-    },
-    {
-      "check": "No local key in 01-localhost-vs-production/production/utils/mock_llm.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in benchmark-results/scale_1_exceptions.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_c10.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_1_exceptions.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/alerts-C.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_slow_0.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in benchmark-results/scale_3_stats.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/requirements.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/public-deployment.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in LEARNING_PATH.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in .github/workflows/eval.yml",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/load_test.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 02-docker/develop/app.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/eval_v1.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 03-cloud-deployment/render/render.yaml",
-      "passed": true
-    },
-    {
-      "check": "No local key in TROUBLESHOOTING.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/BENCHMARK_REPORT_TEMPLATE.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in BENCHMARK_REPORT.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_c50.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/docker-develop-build.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/eval_production_v1.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_3_stats_history.csv",
+      "check": "No local key in reports/eval_v2.json",
       "passed": true
     },
     {
@@ -461,255 +281,11 @@
       "passed": true
     },
     {
-      "check": "No local key in reports/observability-scaling-execution.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/eval_production_v1.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_1_failures.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in 03-cloud-deployment/railway/railway.toml",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/eval_v2.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/app.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 01-localhost-vs-production/production/config.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/scaling-run.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/trace-evidence.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 01-localhost-vs-production/README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/docker-advanced-build.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/docker-image-sizes.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in benchmark-results/scale_3_failures.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in 05-scaling-reliability/production/app.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_slow_0.03.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 04-api-gateway/develop/requirements.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/eval/run_eval.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_c1.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/app/metrics.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/alerts-D.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/cp2-nginx-http.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/eval_v2_fixed.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/k5-day14-scaling-startup.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/eval_v1.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 01-localhost-vs-production/develop/requirements.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 01-localhost-vs-production/develop/utils/mock_llm.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 02-docker/production/docker-compose.yml",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/utils/mock_llm.py",
-      "passed": true
-    },
-    {
       "check": "No local key in reports/alerts-AB.json",
       "passed": true
     },
     {
-      "check": "No local key in reports/locust-scale-1.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/other-stacks-cleanup.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 03-cloud-deployment/README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/k5-day14-docker-startup.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_1_stats.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/eval_v2.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/eval_v2_fixed.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/docker-checkpoints-execution.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_c1.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 02-docker/layer-order/README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in 03-cloud-deployment/railway/requirements.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in .github/workflows/production-readiness.yml",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_c100.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 04-api-gateway/README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/eval_regression.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 01-localhost-vs-production/production/app.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/railway.toml",
-      "passed": true
-    },
-    {
-      "check": "No local key in scripts/run_observability.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in scripts/generate_benchmark_report.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/eval_v2.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in scripts/capture_metrics.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/README.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in CODE_LAB.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/eval_v1.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/app/main.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/eval_v2_fixed.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in benchmark-results/scale_1_stats.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in 01-localhost-vs-production/production/requirements.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/load_v2_c10.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/prometheus/alert_rules_test.yml",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/prometheus-rule-tests.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/utils/mock_llm.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 03-cloud-deployment/railway/utils/mock_llm.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 04-api-gateway/production/app.py",
+      "check": "No local key in benchmark-results/scale_1_stats_history.csv",
       "passed": true
     },
     {
@@ -717,167 +293,15 @@
       "passed": true
     },
     {
-      "check": "No local key in reports/chaos-AB.json",
+      "check": "No local key in 05-scaling-reliability/production/test_stateless.py",
       "passed": true
     },
     {
-      "check": "No local key in reports/load_v2_c10.json",
+      "check": "No local key in BENCHMARK_REPORT.md",
       "passed": true
     },
     {
-      "check": "No local key in reports/benchmark-execution.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/final-compose-http.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 04-api-gateway/production/auth.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in RUN_LAB.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/cp3-jwt-rate-http.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/prometheus/prometheus.yml",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/jaeger-query-otlp.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in scripts/run_benchmarks.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 05-scaling-reliability/develop/app.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 02-docker/develop/requirements.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in scripts/run_checkpoints.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/production-readiness.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/docker-compose.yml",
-      "passed": true
-    },
-    {
-      "check": "No local key in RUBRIC.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/requirements.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/production-metrics.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/load_v2_c50.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_slow_0.1.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/locust-scale-3.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/app/telemetry.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in benchmark-results/scale_1_failures.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/app/config.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_slow_0.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 04-api-gateway/production/rate_limiter.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_3_failures.csv",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/initial-benchmark/load_v2_slow_0.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/observability-remaining-execution.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/eval_regression.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/guard-integration-tests.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/dashboard-metrics.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/eval_v2_fixed.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_slow_0.1.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/production/app/__init__.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 03-cloud-deployment/production-cloud-run/cloudbuild.yaml",
-      "passed": true
-    },
-    {
-      "check": "No local key in 05-scaling-reliability/develop/utils/mock_llm.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_slow_0.1.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in 06-lab-complete/app/cost_guard.py",
-      "passed": true
-    },
-    {
-      "check": "No local key in CHECKPOINTS.md",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/dashboard-metrics-query.txt",
+      "check": "No local key in 04-api-gateway/production/utils/mock_llm.py",
       "passed": true
     },
     {
@@ -885,43 +309,119 @@
       "passed": true
     },
     {
-      "check": "No local key in 04-api-gateway/develop/app.py",
+      "check": "No local key in reports/cp1-production-http.txt",
       "passed": true
     },
     {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/requirements.txt",
+      "check": "No local key in 01-localhost-vs-production/production/app.py",
       "passed": true
     },
     {
-      "check": "No local key in 05-scaling-reliability/production/requirements.txt",
+      "check": "No local key in utils/mock_llm.py",
       "passed": true
     },
     {
-      "check": "No local key in 06-lab-complete/benchmark-observability/develop/utils/mock_llm.py",
+      "check": "No local key in 06-lab-complete/railway.toml",
       "passed": true
     },
     {
-      "check": "No local key in 06-lab-complete/docker-compose.yml",
+      "check": "No local key in reports/observability-build.txt",
       "passed": true
     },
     {
-      "check": "No local key in 02-docker/production/main.py",
+      "check": "No local key in 02-docker/develop/requirements.txt",
       "passed": true
     },
     {
-      "check": "No local key in 06-lab-complete/app/main.py",
+      "check": "No local key in reports/load_v2_slow_0.1.txt",
       "passed": true
     },
     {
-      "check": "No local key in 04-api-gateway/production/requirements.txt",
+      "check": "No local key in 02-docker/README.md",
       "passed": true
     },
     {
-      "check": "No local key in 06-lab-complete/app/redis_client.py",
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/app/metrics.py",
       "passed": true
     },
     {
-      "check": "No local key in reports/cp4-stateless.txt",
+      "check": "No local key in reports/load_v2_slow_0.03.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in scripts/final_audit.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/load_v2_slow_0.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/load_v2_c100.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_slow_0.1.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/prometheus/prometheus.yml",
+      "passed": true
+    },
+    {
+      "check": "No local key in benchmark-results/scale_3_stats_history.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in README.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in RUBRIC.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/alerts-C.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 05-scaling-reliability/develop/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/app/main.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/submission-audit.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/guard-integration-tests.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 03-cloud-deployment/render/render.yaml",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_1_stats.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in 04-api-gateway/production/cost_guard.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/eval_v2.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/benchmark-run.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/cp2-container-http.txt",
       "passed": true
     },
     {
@@ -929,11 +429,27 @@
       "passed": true
     },
     {
+      "check": "No local key in 04-api-gateway/README.md",
+      "passed": true
+    },
+    {
       "check": "No local key in QUICK_REFERENCE.md",
       "passed": true
     },
     {
-      "check": "No local key in reports/initial-benchmark/load_v2_slow_0.03.json",
+      "check": "No local key in reports/jaeger-error-trace.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/eval_v1.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/app/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in QUICK_START.md",
       "passed": true
     },
     {
@@ -941,23 +457,147 @@
       "passed": true
     },
     {
-      "check": "No local key in reports/final-compose-startup.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/cp1-develop-http.txt",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/load_v2_c100.json",
-      "passed": true
-    },
-    {
-      "check": "No local key in reports/cp1-production-http.txt",
-      "passed": true
-    },
-    {
       "check": "No local key in 06-lab-complete/benchmark-observability/production/app/config.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/observability-agent.log",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/docker-advanced-build.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 03-cloud-deployment/railway/app.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_slow_0.03.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in INSTRUCTOR_GUIDE.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 02-docker/develop/app.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in benchmark-results/scale_1_failures.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in LEARNING_PATH.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in MISSION_ANSWERS.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in scripts/run_checkpoints.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/observability-alerts-execution.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/BENCHMARK_REPORT_TEMPLATE.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/README.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 04-api-gateway/production/auth.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in scripts/setup_local.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/README.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/cp3-api-key-http.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 03-cloud-deployment/production-cloud-run/cloudbuild.yaml",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/utils/mock_llm.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/utils/mock_llm.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_c100.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 02-docker/production/main.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in .github/workflows/eval.yml",
+      "passed": true
+    },
+    {
+      "check": "No local key in 02-docker/multi-stages/README.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/eval_v2_fixed.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_slow_0.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 02-docker/production/docker-compose.yml",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/jaeger-query-otlp.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/locust-scale-3.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/eval_v2_fixed.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/jaeger-slow-trace.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/docker-compose.yml",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/grafana/dashboards/agent-overview.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/render.yaml",
       "passed": true
     },
     {
@@ -965,11 +605,95 @@
       "passed": true
     },
     {
-      "check": "No local key in 06-lab-complete/check_production_ready.py",
+      "check": "No local key in reports/eval_regression.json",
       "passed": true
     },
     {
-      "check": "No local key in reports/eval_v2.json",
+      "check": "No local key in 03-cloud-deployment/railway/railway.toml",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/app/rate_limiter.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/eval/run_eval.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/locust-scale-1.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/app.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/cp3-jwt-rate-http.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 03-cloud-deployment/README.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 05-scaling-reliability/README.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/load_v2_slow_0.1.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/k5-day14-docker-startup.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/locust/locustfile.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in DAY14_DELIVERY_CHECKLIST.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/observability-scaling-execution.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 03-cloud-deployment/production-cloud-run/service.yaml",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_c50.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in RULES.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_3_exceptions.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_3_failures.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in CHECKPOINTS.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 04-api-gateway/develop/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in SUBMISSION.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/benchmark-run.json",
       "passed": true
     },
     {
@@ -977,7 +701,443 @@
       "passed": true
     },
     {
+      "check": "No local key in benchmark-results/scale_1_exceptions.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in benchmark-results/scale_3_exceptions.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/dashboard-metrics.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in CODE_LAB.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/grafana/provisioning/datasources/datasources.yml",
+      "passed": true
+    },
+    {
+      "check": "No local key in TROUBLESHOOTING.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in scripts/run_benchmarks.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_3_stats_history.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/prometheus/alert_rules_test.yml",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/final-compose-startup.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 04-api-gateway/develop/utils/mock_llm.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_1_failures.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/load_test.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 05-scaling-reliability/develop/utils/mock_llm.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/utils/mock_llm.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/load_v2_c50.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/final-compose-http.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 01-localhost-vs-production/README.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_slow_0.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 01-localhost-vs-production/develop/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_c10.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/cp4-stateless.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/dashboard-metrics-query.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 01-localhost-vs-production/develop/app.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_c10.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 04-api-gateway/develop/app.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/prometheus-rule-tests.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in scripts/generate_benchmark_report.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_c100.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/app/telemetry.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/observability-cleanup.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 05-scaling-reliability/production/docker-compose.yml",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/docker-checkpoints-execution.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 05-scaling-reliability/production/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/load_v2_c1.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/cp4-graceful-http.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 02-docker/layer-order/README.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/app/config.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/production-readiness.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/scaling-run.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in benchmark-results/scale_3_failures.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/observability-pull.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 01-localhost-vs-production/production/config.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 01-localhost-vs-production/production/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/app/main.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/app/redis_client.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/eval_v2.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_c50.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/load_v2_c1.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/docker-image-sizes.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_slow_0.1.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/docker-develop-build.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/docker-compose.yml",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/other-stacks-cleanup.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 02-docker/production/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/README.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/eval_v2.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_c100.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/eval_v2_fixed.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in RUN_LAB.md",
+      "passed": true
+    },
+    {
       "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/eval_v1.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/benchmark-execution.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 05-scaling-reliability/develop/app.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 03-cloud-deployment/railway/utils/mock_llm.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in scripts/capture_metrics.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/eval_production_v1.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/prometheus/alert_rules.yml",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_c1.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 03-cloud-deployment/railway/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in benchmark-results/scale_1_stats.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/develop-metrics.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 01-localhost-vs-production/develop/utils/mock_llm.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/alerts-D.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/observability-remaining-execution.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 01-localhost-vs-production/production/utils/mock_llm.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in .github/workflows/production-readiness.yml",
+      "passed": true
+    },
+    {
+      "check": "No local key in 05-scaling-reliability/production/utils/mock_llm.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/cp2-nginx-http.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/eval_v1.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/cp1-develop-http.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/eval_v1.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/load_v2_c10.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/load_v2_slow_0.03.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/production-metrics.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/check_production_ready.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/tests/test_guards.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in DEPLOYMENT.md",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/reports/eval_regression.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 04-api-gateway/production/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_c50.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_c10.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/app/cost_guard.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/public-deployment.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/eval_production_v1.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_1_exceptions.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/chaos-AB.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/production/benchmark-results/scale_3_stats.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in benchmark-results/scale_3_stats.csv",
+      "passed": true
+    },
+    {
+      "check": "No local key in 05-scaling-reliability/production/app.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in 04-api-gateway/production/app.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/eval_v2_fixed.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in 06-lab-complete/benchmark-observability/develop/requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/environment.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in scripts/run_observability.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/initial-benchmark/benchmark-execution.txt",
+      "passed": true
+    },
+    {
+      "check": "No local key in 04-api-gateway/production/rate_limiter.py",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/trace-evidence.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/load_v2_slow_0.json",
+      "passed": true
+    },
+    {
+      "check": "No local key in reports/k5-day14-scaling-startup.txt",
       "passed": true
     },
     {
@@ -985,11 +1145,31 @@
       "passed": true
     },
     {
+      "check": "No real env file in submission",
+      "passed": true
+    },
+    {
+      "check": "No .env files in Git history",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION cloud screenshot: dashboard.png",
+      "passed": true
+    },
+    {
       "check": "Cloud PNG: dashboard.png",
       "passed": true
     },
     {
+      "check": "SUBMISSION cloud screenshot: running.png",
+      "passed": true
+    },
+    {
       "check": "Cloud PNG: running.png",
+      "passed": true
+    },
+    {
+      "check": "SUBMISSION cloud screenshot: test.png",
       "passed": true
     },
     {

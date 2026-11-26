@@ -70,7 +70,7 @@ Redis phục vụ state/cache, Qdrant là vector database trong stack mẫu; Ngi
 
 ## Part 3 — Cloud Deployment
 
-**Trạng thái:** agent Part 6 đã chạy trên [Render](https://k5-l3b-day14-nguyendinhminh-2a202603867.onrender.com). GET /health và /ready trả 200; POST /ask thiếu key trả 401 (assistant kiểm tra trực tiếp). Chủ repo đã chạy Swagger có key trả 200, có answer và usage, lúc 15:04:58 GMT+7 ngày 26/11/2026. Kết quả đã bỏ secret trong [public-deployment.json](reports/public-deployment.json). Đủ ba ảnh cloud được lưu ở `screenshots/dashboard.png`, `screenshots/running.png`, `screenshots/test.png`: project có agent Deployed và Redis Available cùng Oregon, log service Live, request có key trả 200.
+**Trạng thái:** agent Part 6 đã chạy trên [Render](https://k5-l3b-day14-nguyendinhminh-2a202603867.onrender.com). GET /health và /ready trả 200; POST /ask thiếu key trả 401 (assistant kiểm tra trực tiếp). Chủ repo đã chạy Swagger có key trả 200, có answer và usage, lúc 15:04:58 GMT+7 ngày 26/11/2026. Kết quả đã bỏ secret trong [public-deployment.json](reports/public-deployment.json). Đủ ba ảnh cloud được lưu ở `screenshots/dashboard.png`, `screenshots/running.png`, `screenshots/test.png`: project có agent Deployed và Redis Available cùng Oregon, log service Live với GET /health trả 200 liên tiếp, request có key trả 200.
 
 Railway TOML mô tả build/deploy của một service, healthcheckPath và restart policy; Render YAML Blueprint mô tả danh sách service, rootDir, Docker context và envVars. Cả hai đều cần Redis URL, API key và app nhận PORT động. Secret dùng generateValue/sync:false trên Render hoặc platform variables trên Railway.
 
@@ -153,6 +153,6 @@ Báo cáo riêng: [BENCHMARK_REPORT.md](BENCHMARK_REPORT.md), JSON trong `report
 |---|---|---|
 | Giải thích Day14 | Đọc repo, diễn giải lý thuyết/checkpoints/cấu hình | Đối chiếu README, CHECKPOINTS, RUBRIC và code |
 | Triển khai toàn bộ lab, Render làm sau | AI viết code Part 6, sửa KB, scripts, CI, tài liệu và chạy lab local | Script chấm 12/12, test Redis đồng thời, load test/eval, Docker scaling, promtool, trace và alert evidence; chủ repo cần đọc/giải thích lại code và số đo |
-| Deploy cloud | AI chuẩn bị config và hướng dẫn; chủ repo tự tạo Redis/Web Service trên Render và chạy Swagger có key | AI kiểm tra health/ready/401, lưu kết quả 200 do chủ repo cung cấp sau khi loại secret; chủ repo đã cung cấp đủ ảnh tổng quan project, Live/log và Postman 200; AI lưu nguyên ảnh và đối chiếu kết quả |
+| Deploy cloud | AI chuẩn bị config và hướng dẫn; chủ repo tự tạo Redis/Web Service trên Render và chạy Swagger có key | AI kiểm tra health/ready/401, lưu kết quả 200 do chủ repo cung cấp sau khi loại secret; chủ repo đã cung cấp đủ ảnh tổng quan project, Live/log và Postman 200; AI lưu nguyên ảnh và đối chiếu kết quả; đã thay ảnh running bằng ảnh /health 200 rõ hơn và rà soát bộ file theo SUBMISSION.md |
 
 Đây là bài triển khai có AI hỗ trợ; không khai chủ repo đã tự viết hoặc tự kiểm những phần do AI thực hiện. Lần đo local do AI điều khiển công cụ trên máy chủ repo. Cần khai báo lại nếu có thay đổi bằng AI ở các lần sau.

@@ -1,5 +1,6 @@
 """Validate submission evidence, cloud check provenance and protected files."""
 import hashlib
+import csv
 import json
 import subprocess
 from pathlib import Path
@@ -16,9 +17,41 @@ def require(condition,label):
 
 for path in ['06-lab-complete/check_production_ready.py',
              '06-lab-complete/benchmark-observability/develop/eval/golden_dataset.jsonl']:
-    original=subprocess.check_output(['git','show',f'HEAD:{path}'],cwd=root)
-    require(hashlib.sha256(original).digest()==hashlib.sha256((root/path).read_bytes()).digest(),
+    expected=read('reports/environment.json')['protected_files_sha256'][path]
+    require(expected==hashlib.sha256((root/path).read_bytes()).hexdigest(),
             'Protected file unchanged: '+path)
+required_paths=[
+    'MISSION_ANSWERS.md','DEPLOYMENT.md','BENCHMARK_REPORT.md',
+    '06-lab-complete/app/main.py','06-lab-complete/app/config.py',
+    '06-lab-complete/app/auth.py','06-lab-complete/app/redis_client.py',
+    '06-lab-complete/app/rate_limiter.py','06-lab-complete/app/cost_guard.py',
+    '06-lab-complete/Dockerfile','06-lab-complete/docker-compose.yml',
+    '06-lab-complete/requirements.txt','06-lab-complete/.dockerignore',
+    '06-lab-complete/.env.example',
+    *[f'reports/load_v2_c{c}.json' for c in (1,10,50,100)],
+    *[f'reports/load_v2_slow_{s}.json' for s in ('0','0.03','0.1')],
+    *[f'reports/{name}.json' for name in ('eval_v1','eval_v2','eval_v2_fixed')],
+    'benchmark-results/scale_1_stats.csv','benchmark-results/scale_3_stats.csv',
+]
+for path in required_paths:
+    require((root/path).is_file() and (root/path).stat().st_size>0,
+            'SUBMISSION required file: '+path)
+require(any((root/'06-lab-complete'/name).is_file() for name in ('render.yaml','railway.toml')),
+        'Deploy config present in Part 6')
+answers=(root/'MISSION_ANSWERS.md').read_text()
+require(all('## Part '+str(part) in answers for part in range(1,6)) and '## AI log' in answers,
+        'Mission answers contain Part 1-5 and AI log')
+for count in (1,3):
+    path=f'benchmark-results/scale_{count}_stats.csv'
+    rows=list(csv.DictReader((root/path).open()))
+    ask=next((row for row in rows if row['Name']=='/ask'),None)
+    require(ask is not None and int(ask['Request Count'])>0 and float(ask['Requests/s'])>0,
+            'Locust CSV has measured /ask requests: '+path)
+for name in [*[f'load_v2_c{c}' for c in (1,10,50,100)],
+             *[f'load_v2_slow_{s}' for s in ('0','0.03','0.1')],
+             'eval_v1','eval_v2','eval_v2_fixed']:
+    require(read('reports/'+name+'.json')==read('06-lab-complete/benchmark-observability/develop/reports/'+name+'.json'),
+            'Root report matches CP7 original: '+name)
 for c in [1,10,50,100]:
     r=read(f'reports/load_v2_c{c}.json')
     require(r['concurrency']==c and r['total_requests']==300 and
@@ -54,13 +87,18 @@ if key:
             require(key not in path.read_text(errors='ignore'),'No local key in '+name)
 ignored=subprocess.run(['git','check-ignore','06-lab-complete/.env'],cwd=root,capture_output=True).returncode==0
 require(ignored,'Local secret .env ignored by Git')
+tracked_env=[name for name in paths if Path(name).name in ('.env','.env.local','.env.production')]
+require(not tracked_env,'No real env file in submission')
+history=subprocess.check_output(['git','log','--all','--format=%H','--','*.env','.env'],cwd=root,text=True)
+require(not history.strip(),'No .env files in Git history')
 subprocess.run(['git','diff','--check'],cwd=root,check=True)
 deployment_path=root/'reports/public-deployment.json'
 deployed=deployment_path.exists()
 cloud_images=['dashboard.png','running.png','test.png']
 for name in cloud_images:
     image=root/'screenshots'/name
-    if image.exists():
+    if deployed:
+        require(image.exists(), 'SUBMISSION cloud screenshot: '+name)
         require(image.read_bytes().startswith(b'\x89PNG\r\n\x1a\n'), 'Cloud PNG: '+name)
 if deployed:
     deployment=read('reports/public-deployment.json')

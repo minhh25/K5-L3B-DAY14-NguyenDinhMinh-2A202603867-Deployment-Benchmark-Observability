@@ -59,7 +59,7 @@ curl -sS -o /dev/null -w '%{http_code}\n' -X POST "$BASE/ask" \
 
 Kết quả mong đợi lần lượt: **200, 200, 401, 200**. Nếu `/ready` trả 503, kiểm tra URL, vùng, quyền kết nối Redis và log. `/health` vẫn 200 khi Redis không kết nối được để phân biệt liveness/readiness.
 
-Ảnh gốc do chủ repo cung cấp đã được lưu: [Render Live và log](screenshots/running.png), [Postman POST /ask trả 200](screenshots/test.png). Đã có [ảnh tổng quan project](screenshots/dashboard.png), hiển thị agent Deployed và Redis/Valkey Available, cùng vùng Oregon. Ảnh Live ghi nhận bản deploy ứng dụng từ commit 30796cb; các commit sau chỉ cập nhật tài liệu/bằng chứng. Dòng GET/HEAD `/` trả 404 trong log do app không khai báo route gốc; `/health`, `/ready` và `/ask` được kiểm tra riêng. Không commit ảnh Environment hoặc Curl hiển thị secret.
+Ảnh gốc do chủ repo cung cấp đã được lưu: [Render Live và log](screenshots/running.png), [Postman POST /ask trả 200](screenshots/test.png). Đã có [ảnh tổng quan project](screenshots/dashboard.png), hiển thị agent Deployed và Redis/Valkey Available, cùng vùng Oregon. Ảnh Live ghi nhận bản deploy ứng dụng từ commit 30796cb; các commit sau chỉ cập nhật tài liệu/bằng chứng. Ảnh running đã được thay bằng ảnh gốc rõ hơn, hiển thị nhiều request GET `/health` trả 200 OK và JSON request log; không chỉnh sửa nội dung ảnh. `/ready` và `/ask` được kiểm tra riêng trong bảng trên. Không commit ảnh Environment hoặc Curl hiển thị secret.
 
 ## Railway và Cloud Run
 

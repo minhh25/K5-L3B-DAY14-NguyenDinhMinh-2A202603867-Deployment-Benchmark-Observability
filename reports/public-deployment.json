@@ -71,7 +71,8 @@
     },
     "screenshots/running.png": {
       "source": "user_supplied_original_screenshot",
-      "description": "Render deploy succeeded/live, duration 50.9 seconds, source commit 30796cb and runtime logs"
+      "description": "Render Deploy succeeded/Live, source 30796cb; repeated GET /health responses 200 OK with JSON request logs",
+      "sha256": "6e24168fe3a4f222af5ff4b031054587e2d4e91e455edbf8d14b11060d170eec"
     },
     "screenshots/dashboard.png": {
       "source": "user_supplied_original_screenshot",
