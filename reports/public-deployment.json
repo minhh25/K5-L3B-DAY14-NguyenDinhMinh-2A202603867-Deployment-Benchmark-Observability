@@ -63,9 +63,7 @@
     "Authenticated 200 was supplied by the user from Swagger; the assistant did not repeat the authenticated request.",
     "No API key or private Redis connection URL is stored in this report."
   ],
-  "cloud_screenshots_pending": [
-    "screenshots/dashboard.png"
-  ],
+  "cloud_screenshots_pending": [],
   "cloud_screenshots": {
     "screenshots/test.png": {
       "source": "user_supplied_original_screenshot",
@@ -74,6 +72,10 @@
     "screenshots/running.png": {
       "source": "user_supplied_original_screenshot",
       "description": "Render deploy succeeded/live, duration 50.9 seconds, source commit 30796cb and runtime logs"
+    },
+    "screenshots/dashboard.png": {
+      "source": "user_supplied_original_screenshot",
+      "description": "Render Lab Day14 Production overview: Docker agent Deployed, day14-redis Available (Valkey 8), both Oregon"
     }
   }
 }

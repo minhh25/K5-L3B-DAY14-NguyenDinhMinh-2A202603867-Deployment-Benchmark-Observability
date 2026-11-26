@@ -3,7 +3,7 @@
 > **Bài làm đã triển khai local:** xem [RUN_LAB.md](RUN_LAB.md),
 > [MISSION_ANSWERS.md](MISSION_ANSWERS.md) và [BENCHMARK_REPORT.md](BENCHMARK_REPORT.md).
 > Agent Part 6 đạt `PASS 12/12` trong lần kiểm tra đầy đủ có Docker;
-> Agent đã chạy trên [Render](https://k5-l3b-day14-nguyendinhminh-2a202603867.onrender.com); kết quả kiểm tra và các ảnh cloud còn cần bổ sung được ghi tại [DEPLOYMENT.md](DEPLOYMENT.md).
+> Agent đã chạy trên [Render](https://k5-l3b-day14-nguyendinhminh-2a202603867.onrender.com); kết quả kiểm tra và đủ ba ảnh cloud được ghi tại [DEPLOYMENT.md](DEPLOYMENT.md).
 
 > Đưa agent lên cloud, đo xem nó nhanh và đúng tới đâu, rồi giám sát nó khi chạy thật.
 
