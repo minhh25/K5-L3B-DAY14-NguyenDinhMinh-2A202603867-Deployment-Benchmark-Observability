@@ -1,0 +1,71 @@
+{
+  "base_url": "https://k5-l3b-day14-nguyendinhminh-2a202603867.onrender.com",
+  "checks": [
+    {
+      "name": "health",
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "environment": "production"
+      },
+      "source": "assistant_http_check",
+      "checked_utc": "2026-11-26T08:06:41.775582+00:00"
+    },
+    {
+      "name": "ready",
+      "method": "GET",
+      "path": "/ready",
+      "status": 200,
+      "body": {
+        "ready": true
+      },
+      "source": "assistant_http_check",
+      "checked_utc": "2026-11-26T08:06:41.761091+00:00"
+    },
+    {
+      "name": "ask_without_key",
+      "method": "POST",
+      "path": "/ask",
+      "status": 401,
+      "body": {
+        "detail": "Missing or invalid API key"
+      },
+      "source": "assistant_http_check",
+      "checked_utc": "2026-11-26T08:06:42.087812+00:00"
+    },
+    {
+      "name": "ask_with_key",
+      "method": "POST",
+      "path": "/ask",
+      "status": 200,
+      "request_body": {
+        "question": "What is Docker?"
+      },
+      "body": {
+        "question": "What is Docker?",
+        "answer": "Container là cách đóng gói app để chạy ở mọi nơi. Build once, run anywhere!",
+        "usage": {
+          "input_tokens": 3,
+          "output_tokens": 18,
+          "cost_usd": 1.1249999999999999e-05
+        }
+      },
+      "source": "user_supplied_swagger_response",
+      "response_date_utc": "2026-11-26T08:04:58Z",
+      "request_id": "fd7f727f3e894f518908e0ad05eb7eb6",
+      "credential_recorded": false
+    }
+  ],
+  "notes": [
+    "First three checks were performed directly by the assistant against the public service.",
+    "Authenticated 200 was supplied by the user from Swagger; the assistant did not repeat the authenticated request.",
+    "No API key or private Redis connection URL is stored in this report."
+  ],
+  "cloud_screenshots_pending": [
+    "screenshots/dashboard.png",
+    "screenshots/running.png",
+    "screenshots/test.png"
+  ]
+}

@@ -1,6 +1,6 @@
 # Day 14 — Mission Answers
 
-Bài làm dùng mock LLM và số đo từ chính các lệnh đã chạy. Thông tin hệ thống/lần đo: `reports/benchmark-run.json`. Deploy Render chưa thực hiện theo yêu cầu chủ repo; xem `DEPLOYMENT.md`. Hướng dẫn tái chạy: `RUN_LAB.md`.
+Bài làm dùng mock LLM và số đo từ chính các lệnh đã chạy. Thông tin hệ thống/lần đo: `reports/benchmark-run.json`. Agent đã deploy Render, có bốn kết quả kiểm tra public; xem `DEPLOYMENT.md` và `reports/public-deployment.json`. Ba ảnh cloud vẫn chờ bổ sung. Hướng dẫn tái chạy: `RUN_LAB.md`.
 
 ## Part 1 — Localhost vs Production
 
@@ -70,7 +70,7 @@ Redis phục vụ state/cache, Qdrant là vector database trong stack mẫu; Ngi
 
 ## Part 3 — Cloud Deployment
 
-**Trạng thái:** chờ cấu hình/deploy Render theo yêu cầu. Chưa có URL hoặc ảnh cloud, không khai đã hoàn tất checkpoint CP6. Đã chuẩn bị Dockerfile, `render.yaml`, `railway.toml`, env template và hướng dẫn kiểm tra.
+**Trạng thái:** agent Part 6 đã chạy trên [Render](https://k5-l3b-day14-nguyendinhminh-2a202603867.onrender.com). GET /health và /ready trả 200; POST /ask thiếu key trả 401 (assistant kiểm tra trực tiếp). Chủ repo đã chạy Swagger có key trả 200, có answer và usage, lúc 15:04:58 GMT+7 ngày 26/11/2026. Kết quả đã bỏ secret trong [public-deployment.json](reports/public-deployment.json). Còn chụp ba ảnh cloud để đủ bằng chứng CP6.
 
 Railway TOML mô tả build/deploy của một service, healthcheckPath và restart policy; Render YAML Blueprint mô tả danh sách service, rootDir, Docker context và envVars. Cả hai đều cần Redis URL, API key và app nhận PORT động. Secret dùng generateValue/sync:false trên Render hoặc platform variables trên Railway.
 
@@ -141,7 +141,7 @@ Kiểm tra đầy đủ có Docker: [production-readiness.txt](reports/productio
 
 ```
 
-`Public URL ready` ở trên kiểm file cấu hình và PORT, không có nghĩa đã deploy Render. Bốn kiểm thử bổ sung trên Redis thật: [guard-integration-tests.txt](reports/guard-integration-tests.txt).
+`Public URL ready` của script chấm kiểm file cấu hình và PORT; việc deploy thật được kiểm chứng riêng bằng bốn kết quả trong `reports/public-deployment.json`. Bốn kiểm thử bổ sung trên Redis thật: [guard-integration-tests.txt](reports/guard-integration-tests.txt).
 
 ## Part 7 — Benchmark & Observability
 
@@ -153,6 +153,6 @@ Báo cáo riêng: [BENCHMARK_REPORT.md](BENCHMARK_REPORT.md), JSON trong `report
 |---|---|---|
 | Giải thích Day14 | Đọc repo, diễn giải lý thuyết/checkpoints/cấu hình | Đối chiếu README, CHECKPOINTS, RUBRIC và code |
 | Triển khai toàn bộ lab, Render làm sau | AI viết code Part 6, sửa KB, scripts, CI, tài liệu và chạy lab local | Script chấm 12/12, test Redis đồng thời, load test/eval, Docker scaling, promtool, trace và alert evidence; chủ repo cần đọc/giải thích lại code và số đo |
-| Chuẩn bị deploy | AI tạo render.yaml/railway.toml và hướng dẫn | Chủ repo cấu hình tài khoản/Redis, deploy Render, điền URL và chụp 3 ảnh cloud |
+| Deploy cloud | AI chuẩn bị config và hướng dẫn; chủ repo tự tạo Redis/Web Service trên Render và chạy Swagger có key | AI kiểm tra health/ready/401, lưu kết quả 200 do chủ repo cung cấp sau khi loại secret; chủ repo còn chụp 3 ảnh cloud |
 
 Đây là bài triển khai có AI hỗ trợ; không khai chủ repo đã tự viết hoặc tự kiểm những phần do AI thực hiện. Lần đo local do AI điều khiển công cụ trên máy chủ repo. Cần khai báo lại nếu có thay đổi bằng AI ở các lần sau.

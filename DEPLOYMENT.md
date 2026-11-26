@@ -1,8 +1,8 @@
 # Deployment — Day 14
 
-**Trạng thái:** code và cấu hình local đã hoàn thiện. Chưa deploy Render theo yêu cầu của chủ repo; chưa có URL public hoặc ảnh cloud. Không coi kiểm tra cấu hình deploy trong `PASS 12/12` là bằng chứng đã chạy trên cloud.
+**Trạng thái:** agent Part 6 đã deploy lên Render. Health, readiness và chặn request thiếu key đã được kiểm tra trực tiếp; chủ repo đã cung cấp kết quả Swagger có key trả 200. Bằng chứng đã che secret: [public-deployment.json](reports/public-deployment.json). Còn bổ sung ba ảnh cloud để hoàn tất bài nộp.
 
-## Render: cấu hình sau
+## Cấu hình Render
 
 Đã chuẩn bị Blueprint tại `06-lab-complete/render.yaml`. Trong Render, kết nối repo này và chọn Blueprint path đó. File đặt `rootDir: 06-lab-complete`; Dockerfile và Docker build context tính tương đối từ rootDir.
 
@@ -32,7 +32,16 @@ Tạo Redis/Render Key Value trong cùng vùng với web service, lấy Internal
 
 ## URL public
 
-**Chờ điền sau khi Render deploy:** `<RENDER_PUBLIC_URL>`.
+[Agent Day14 trên Render](https://k5-l3b-day14-nguyendinhminh-2a202603867.onrender.com).
+
+| Request public | HTTP | Nguồn bằng chứng |
+|---|---:|---|
+| GET /health | 200 | Assistant kiểm tra trực tiếp |
+| GET /ready | 200 | Assistant kiểm tra trực tiếp, ready=true |
+| POST /ask thiếu key | 401 | Assistant kiểm tra trực tiếp |
+| POST /ask có key | 200 | Chủ repo chạy Swagger, 26/11/2026 15:04:58 GMT+7 |
+
+Response có key chứa answer về Docker và usage; API key được loại khỏi bản lưu.
 
 ## Tự kiểm tra sau deploy
 
@@ -50,7 +59,7 @@ curl -sS -o /dev/null -w '%{http_code}\n' -X POST "$BASE/ask" \
 
 Kết quả mong đợi lần lượt: **200, 200, 401, 200**. Nếu `/ready` trả 503, kiểm tra URL, vùng, quyền kết nối Redis và log. `/health` vẫn 200 khi Redis không kết nối được để phân biệt liveness/readiness.
 
-Sau khi thành công, bổ sung `screenshots/dashboard.png`, `screenshots/running.png`, `screenshots/test.png` từ Render và các phép thử thật. Các ảnh này hiện chưa được tạo vì chưa deploy.
+Sau khi thành công, bổ sung `screenshots/dashboard.png`, `screenshots/running.png`, `screenshots/test.png` từ Render và các phép thử thật. Service đã deploy; ba ảnh này vẫn chờ chủ repo bổ sung. Khi chụp Swagger, ẩn phần Curl hoặc che giá trị X-API-Key. Không commit ảnh Environment có secret.
 
 ## Railway và Cloud Run
 

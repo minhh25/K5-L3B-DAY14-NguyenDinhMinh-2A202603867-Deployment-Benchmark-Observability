@@ -23,6 +23,8 @@ def locust(count):
 def main():
     env=read('environment.json')
     meta=read('benchmark-run.json')
+    deployed=(R/'public-deployment.json').exists()
+    deployment_note=('Agent Part 6 đã deploy Render; bốn kết quả public nằm trong reports/public-deployment.json, ba ảnh cloud còn chờ bổ sung.' if deployed else 'Deploy Render đang chờ chủ repo.')
     local_time=datetime.fromisoformat(meta['started_utc']).astimezone(ZoneInfo('Asia/Ho_Chi_Minh'))
     v1,v2,fixed=[read(name) for name in ['eval_v1.json','eval_v2.json','eval_v2_fixed.json']]
     ab=read('chaos-AB.json')
@@ -45,7 +47,7 @@ def main():
 **Ngày chạy:** {local_time.strftime('%d/%m/%Y %H:%M')} (GMT+7; timestamp gốc UTC trong JSON).
 **Môi trường:** {env['host_cpu']}, RAM {env['host_memory_bytes']/1024**3:.0f} GiB; {env['platform']}; Python {env['python'].split()[0]}. Docker Desktop {env['docker']['ServerVersion']}, {env['docker']['NCPU']} CPU / {env['docker']['MemTotal']/1024**3:.2f} GiB RAM cho VM. Agent observability giới hạn 0.5 CPU / 256 MiB mỗi container, một worker/container.
 
-Mọi số trong bảng được sinh từ JSON/CSV đính kèm bởi `scripts/generate_benchmark_report.py`. Chi phí là chi phí mô phỏng, không phải hóa đơn API. Bảng local dùng lượt cuối trên code có đầy đủ histogram độ dài câu hỏi, sau khi dừng stack Docker gây tải; lượt đầu chạy trong lúc build Docker được giữ nguyên ở `reports/initial-benchmark/` để thấy ảnh hưởng môi trường, không trộn số hai lượt. Đo trên máy dùng chung, một lượt mỗi cấu hình; không coi đây là cam kết capacity hoặc bằng chứng latency của LLM thật. Deploy Render đang chờ chủ repo; Part 7 là stack chạy local độc lập với Part 6.
+Mọi số trong bảng được sinh từ JSON/CSV đính kèm bởi `scripts/generate_benchmark_report.py`. Chi phí là chi phí mô phỏng, không phải hóa đơn API. Bảng local dùng lượt cuối trên code có đầy đủ histogram độ dài câu hỏi, sau khi dừng stack Docker gây tải; lượt đầu chạy trong lúc build Docker được giữ nguyên ở `reports/initial-benchmark/` để thấy ảnh hưởng môi trường, không trộn số hai lượt. Đo trên máy dùng chung, một lượt mỗi cấu hình; không coi đây là cam kết capacity hoặc bằng chứng latency của LLM thật. {deployment_note} Part 7 là stack chạy local độc lập với Part 6.
 
 ## 1. SLO của agent
 
@@ -194,7 +196,7 @@ Trong lần đo, RPS 3/1 instance = **{ratio:.2f} lần**; p95 đổi từ **{sc
 
 Nếu triển khai thật sẽ bổ sung quality canary, timeout/retry có giới hạn, dependency latency, budget burn theo tenant, queue saturation và cảnh báo mất telemetry. Prometheus label giữ cardinality thấp; sampling tracing có thể giảm tài nguyên nhưng giảm cơ hội giữ được request hiếm. Stack lab Grafana anonymous/admin mặc định chỉ dùng local.
 
-Các lỗi mẫu đã sửa để tái chạy được: handler SIGTERM của ví dụ Part 5 nuốt signal khi import qua CLI; Dockerfile Part 7 copy dependencies sang home khác với HOME của user. Không sửa script chấm hoặc golden dataset. Chưa deploy Render hoặc chạy workflow trên GitHub; xem `DEPLOYMENT.md` cho phần còn lại.
+Các lỗi mẫu đã sửa để tái chạy được: handler SIGTERM của ví dụ Part 5 nuốt signal khi import qua CLI; Dockerfile Part 7 copy dependencies sang home khác với HOME của user. Không sửa script chấm hoặc golden dataset. Trạng thái deploy thật xem `DEPLOYMENT.md` và `reports/public-deployment.json`; các phép đo Part 7 ở đây vẫn là local. Kết quả CI trên GitHub chưa được xác minh trong báo cáo này.
 '''
     (ROOT/'BENCHMARK_REPORT.md').write_text(text)
     print('Generated BENCHMARK_REPORT.md from measured evidence.')

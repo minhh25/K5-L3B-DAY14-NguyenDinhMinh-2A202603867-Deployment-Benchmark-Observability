@@ -1,4 +1,4 @@
-"""Validate submission evidence and protected files; Render remains explicitly deferred."""
+"""Validate submission evidence, cloud check provenance and protected files."""
 import hashlib
 import json
 import subprocess
@@ -45,7 +45,7 @@ for name in ['grafana-dashboard','jaeger-slow-trace','jaeger-error-trace','prome
 for name in ['MISSION_ANSWERS.md','DEPLOYMENT.md','BENCHMARK_REPORT.md','RUN_LAB.md']:
     require((root/name).exists(),'Document: '+name)
 key=dotenv_values(root/'06-lab-complete/.env').get('AGENT_API_KEY','')
-paths=set(subprocess.check_output(['git','diff','--name-only'],cwd=root,text=True).splitlines())
+paths=set(subprocess.check_output(['git','ls-files'],cwd=root,text=True).splitlines())
 paths.update(subprocess.check_output(['git','ls-files','--others','--exclude-standard'],cwd=root,text=True).splitlines())
 if key:
     for name in paths:
@@ -55,7 +55,18 @@ if key:
 ignored=subprocess.run(['git','check-ignore','06-lab-complete/.env'],cwd=root,capture_output=True).returncode==0
 require(ignored,'Local secret .env ignored by Git')
 subprocess.run(['git','diff','--check'],cwd=root,check=True)
+deployment_path=root/'reports/public-deployment.json'
+deployed=deployment_path.exists()
+cloud_images=['dashboard.png','running.png','test.png']
+if deployed:
+    deployment=read('reports/public-deployment.json')
+    codes={item['name']:item['status'] for item in deployment['checks']}
+    require(codes=={'health':200,'ready':200,'ask_without_key':401,'ask_with_key':200},
+            'Cloud: health 200, ready 200, missing key 401, authenticated 200')
 (root/'reports/submission-audit.json').write_text(json.dumps({
-    'checks':checks,'local_lab_complete':True,'render_deployment':'deferred by user',
-    'public_url_verified':False,'github_workflows_executed':False},indent=2,ensure_ascii=False))
-print(f'{len(checks)} audit checks passed. Render/public URL deliberately deferred.')
+    'checks':checks,'local_lab_complete':True,'render_deployment':'deployed' if deployed else 'deferred by user',
+    'public_url_verified':deployed,
+    'authenticated_check_source':'user_supplied_swagger_response' if deployed else None,
+    'cloud_screenshots_complete':all((root/'screenshots'/name).exists() for name in cloud_images),
+    'github_workflows_status_verified':False},indent=2,ensure_ascii=False))
+print(f'{len(checks)} audit checks passed. Render deployed: {deployed}; see cloud screenshot status in JSON.')

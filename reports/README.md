@@ -17,8 +17,9 @@ Các file ở đây là output từ lệnh/API thật trên máy làm bài, khô
 | Alert và thời gian phát hiện | `alerts-AB.json`, `alerts-C.json`, `alerts-D.json`, `chaos-AB.json`, `chaos-remaining.json` |
 | Hạ về v1 trong production stack | `eval_production_v1.json` — cố ý fail quality gate |
 | Alert rule unit test | `prometheus-rule-tests.txt` |
+| Deploy Render | `public-deployment.json` — bốn kết quả, không lưu key |
 | Kiểm tra bộ bài nộp | `submission-audit.json` |
 
 Load test/Locust và eval regression có thể trả exit code 1 đúng mục đích thí nghiệm; đây không phải bằng chứng script hỏng. Xem report JSON để phân biệt vi phạm SLO/quality gate với lỗi khởi động. Log observability-alerts có giữ lần xuất trace theo API cũ bị 404 và phần ghi nhận đã khôi phục bằng API v3.
 
-Ảnh thật nằm ở `../screenshots/`. Ba ảnh Render và public URL chưa có do chủ repo chọn cấu hình/deploy Render sau. CI YAML đã được tạo, chưa chạy trên GitHub trong lần làm này.
+Ảnh thật nằm ở `../screenshots/`. URL Render và bốn kết quả kiểm tra nằm trong `public-deployment.json`; 200 có key là response Swagger do chủ repo cung cấp, ba phép còn lại được assistant kiểm tra trực tiếp. Ba ảnh cloud vẫn chờ bổ sung. CI YAML đã có; trạng thái chạy trên GitHub chưa được xác minh trong bộ bằng chứng này.

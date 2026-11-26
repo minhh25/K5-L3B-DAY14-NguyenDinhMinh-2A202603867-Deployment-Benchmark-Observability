@@ -1,6 +1,6 @@
 # Chạy bài Day14 đã hoàn thiện
 
-Code, số đo và bằng chứng local đã được thực hiện trong repo. Việc deploy Render được để lại theo yêu cầu; xem `DEPLOYMENT.md`. Script chấm báo PASS là kiểm tra code/config local, không xác nhận URL cloud.
+Code, số đo và bằng chứng local đã được thực hiện trong repo. Agent đã chạy trên [Render](https://k5-l3b-day14-nguyendinhminh-2a202603867.onrender.com); xem `DEPLOYMENT.md` và `reports/public-deployment.json` cho bốn kết quả kiểm tra cloud. Script chấm local và kiểm tra URL public là hai bộ bằng chứng riêng.
 
 ## 1. Môi trường
 
@@ -107,4 +107,4 @@ docker rm -f day14-integration-redis
 
 Bốn test kiểm tra 40 lần gọi đồng thời chỉ 5 lượt được nhận, dọn request hết hạn, reservation ngân sách đồng thời và đối soát chi phí. Chỉ dùng Redis thử nghiệm; test tự xóa namespace riêng của nó.
 
-Hai workflow GitHub Actions: `production-readiness.yml` kiểm đủ 12 tiêu chí, concurrency guards và promtool; `eval.yml` kiểm candidate đạt 23/23, không regression so với báo cáo baseline đã nộp. Cần bật branch protection yêu cầu hai jobs nếu muốn GitHub thực sự cấm merge khi job đỏ. Workflow đã được tạo; chưa có kết quả chạy trên GitHub trong phiên làm này.
+Hai workflow GitHub Actions: `production-readiness.yml` kiểm đủ 12 tiêu chí, concurrency guards và promtool; `eval.yml` kiểm candidate đạt 23/23, không regression so với báo cáo baseline đã nộp. Cần bật branch protection yêu cầu hai jobs nếu muốn GitHub thực sự cấm merge khi job đỏ. Workflow đã được tạo; kết quả chạy trên GitHub cần xem tại tab Actions, chưa được xác minh trong bộ bằng chứng này.
