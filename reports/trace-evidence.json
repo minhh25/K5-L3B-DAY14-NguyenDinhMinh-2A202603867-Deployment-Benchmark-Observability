@@ -1,0 +1,103 @@
+{
+  "slow": {
+    "trace_id": "12423ed3f9fbe7f322177fcb43f9460f",
+    "logs": [
+      {
+        "ts": "2026-11-26T06:32:22.986797+00:00",
+        "level": "INFO",
+        "service": "observable-agent",
+        "instance": "ee5d13dba8d8",
+        "event": "llm_call",
+        "trace_id": "12423ed3f9fbe7f322177fcb43f9460f",
+        "span_id": "5a34953f382647b3",
+        "request_id": "059c767b5d2e",
+        "model": "mock-llm-small",
+        "agent_version": "v2",
+        "input_tokens": 95,
+        "output_tokens": 55,
+        "cost_usd": 4.7e-05,
+        "llm_ms": 1647.8
+      },
+      {
+        "ts": "2026-11-26T06:32:23.003082+00:00",
+        "level": "INFO",
+        "service": "observable-agent",
+        "instance": "ee5d13dba8d8",
+        "event": "http_request",
+        "trace_id": "12423ed3f9fbe7f322177fcb43f9460f",
+        "span_id": "5a34953f382647b3",
+        "request_id": "059c767b5d2e",
+        "method": "POST",
+        "route": "/ask",
+        "status": 200,
+        "ms": 1813.7
+      }
+    ],
+    "spans": [
+      {
+        "name": "agent.retrieve_context",
+        "duration_ms": 20.914625
+      },
+      {
+        "name": "chat mock-llm-small",
+        "duration_ms": 1773.953876
+      },
+      {
+        "name": "agent.run",
+        "duration_ms": 1795.312667
+      },
+      {
+        "name": "POST /ask",
+        "duration_ms": 1838.8702930000002
+      }
+    ]
+  },
+  "error": {
+    "trace_id": "33f625461381f8e3708f5a173070738d",
+    "logs": [
+      {
+        "ts": "2026-11-26T06:32:24.448596+00:00",
+        "level": "INFO",
+        "service": "observable-agent",
+        "instance": "ee5d13dba8d8",
+        "event": "llm_error",
+        "trace_id": "33f625461381f8e3708f5a173070738d",
+        "span_id": "8826b754185d1d2c",
+        "request_id": "568a6025ca31",
+        "error": "Upstream LLM error: 503 Service Unavailable (mock)"
+      },
+      {
+        "ts": "2026-11-26T06:32:24.449028+00:00",
+        "level": "INFO",
+        "service": "observable-agent",
+        "instance": "ee5d13dba8d8",
+        "event": "http_request",
+        "trace_id": "33f625461381f8e3708f5a173070738d",
+        "span_id": "8826b754185d1d2c",
+        "request_id": "568a6025ca31",
+        "method": "POST",
+        "route": "/ask",
+        "status": 503,
+        "ms": 103.6
+      }
+    ],
+    "spans": [
+      {
+        "name": "agent.retrieve_context",
+        "duration_ms": 25.951667
+      },
+      {
+        "name": "chat mock-llm-small",
+        "duration_ms": 75.224958
+      },
+      {
+        "name": "agent.run",
+        "duration_ms": 101.8115
+      },
+      {
+        "name": "POST /ask",
+        "duration_ms": 104.284625
+      }
+    ]
+  }
+}

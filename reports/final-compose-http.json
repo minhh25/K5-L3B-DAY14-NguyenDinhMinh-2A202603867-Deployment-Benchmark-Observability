@@ -1,0 +1,76 @@
+[
+  {
+    "method": "GET",
+    "path": "/health",
+    "key": "invalid/missing",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "environment": "development"
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/ready",
+    "key": "invalid/missing",
+    "status": 200,
+    "body": {
+      "ready": true
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/ask",
+    "key": "invalid/missing",
+    "status": 401,
+    "body": {
+      "detail": "Missing or invalid API key"
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/ask",
+    "key": "invalid/missing",
+    "status": 401,
+    "body": {
+      "detail": "Missing or invalid API key"
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/ask",
+    "key": "valid (omitted)",
+    "status": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "string_too_short",
+          "loc": [
+            "body",
+            "question"
+          ],
+          "msg": "String should have at least 1 character",
+          "input": "",
+          "ctx": {
+            "min_length": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/ask",
+    "key": "valid (omitted)",
+    "status": 200,
+    "body": {
+      "question": "What is Docker?",
+      "answer": "Container là cách đóng gói app để chạy ở mọi nơi. Build once, run anywhere!",
+      "usage": {
+        "input_tokens": 3,
+        "output_tokens": 18,
+        "cost_usd": 1.1249999999999999e-05
+      }
+    }
+  }
+]

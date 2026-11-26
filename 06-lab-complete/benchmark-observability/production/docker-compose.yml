@@ -22,6 +22,7 @@ services:
     environment:
       - ENVIRONMENT=lab
       - AGENT_VERSION=${AGENT_VERSION:-v2}
+      - MOCK_KB_PATCHES=${MOCK_KB_PATCHES:-1}
       - LLM_MODEL=${LLM_MODEL:-mock-llm-small}
       - AGENT_API_KEY=${AGENT_API_KEY:-day14-lab-key}
       # Fault injection — chỉnh để thấy dashboard/alert phản ứng

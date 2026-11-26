@@ -1,0 +1,3 @@
+C LLMCostBurnRateHigh firing after 178.6 seconds
+D AgentInstanceDown firing after 45.3 seconds
+Experiments C, D, E verified and default v2 restored.

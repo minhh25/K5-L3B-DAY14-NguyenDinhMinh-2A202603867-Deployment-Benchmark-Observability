@@ -1,0 +1,18 @@
+{
+  "python": "3.11.4 (v3.11.4:d2340ef257, Jun  6 2023, 19:15:51) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "host_cpu": "Apple M3",
+  "host_memory_bytes": 17179869184,
+  "docker": {
+    "ServerVersion": "27.5.1",
+    "NCPU": 8,
+    "MemTotal": 8217858048,
+    "Architecture": "aarch64",
+    "OperatingSystem": "Docker Desktop"
+  },
+  "protected_files_sha256": {
+    "06-lab-complete/check_production_ready.py": "88e975e418e5fac30741e1f0657950f38c919dd990a6a58ae0b8e23a7c58130d",
+    "06-lab-complete/benchmark-observability/develop/eval/golden_dataset.jsonl": "e13c07f6856b2dbec090bcb8ce0a7480e0442292d29921e8663998676bc19d56"
+  }
+}

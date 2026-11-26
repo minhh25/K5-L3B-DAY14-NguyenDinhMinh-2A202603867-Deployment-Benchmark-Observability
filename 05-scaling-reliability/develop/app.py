@@ -183,8 +183,8 @@ def handle_sigterm(signum, frame):
     logger.info(f"Received signal {signum} — uvicorn will handle graceful shutdown")
 
 
-signal.signal(signal.SIGTERM, handle_sigterm)
-signal.signal(signal.SIGINT, handle_sigterm)
+# Let uvicorn own SIGTERM/SIGINT. Registering a handler at import time can replace
+# uvicorn's handler (when started through its CLI), preventing process shutdown.
 
 
 if __name__ == "__main__":

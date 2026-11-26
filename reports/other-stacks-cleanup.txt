@@ -1,0 +1,8 @@
+time="2026-11-26T13:43:10+07:00" level=warning msg="/Users/minh25/Documents/AI Thuc chien Vin/LAB/K5-L3B-DAY14-NguyenDinhMinh-2A202603867-Deployment-Benchmark-Observability/02-docker/production/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Volume k5-day14-docker_qdrant_data  Removing
+ Volume k5-day14-docker_redis_data  Removing
+ Volume k5-day14-docker_qdrant_data  Removed
+ Volume k5-day14-docker_redis_data  Removed
+time="2026-11-26T13:43:11+07:00" level=warning msg="/Users/minh25/Documents/AI Thuc chien Vin/LAB/K5-L3B-DAY14-NguyenDinhMinh-2A202603867-Deployment-Benchmark-Observability/05-scaling-reliability/production/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Volume k5-day14-final_redis_data  Removing
+ Volume k5-day14-final_redis_data  Removed

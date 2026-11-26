@@ -1,0 +1,30 @@
+{
+  "prometheus_reset_before_C": true,
+  "C": {
+    "LLMCostBurnRateHigh": 178.6
+  },
+  "D": {
+    "AgentInstanceDown": 45.3
+  },
+  "E": {
+    "config": {
+      "AGENT_VERSION": "v1"
+    },
+    "quality_gate_exit_code": 1,
+    "alerts_snapshot": [
+      {
+        "labels": {
+          "alertname": "LLMCostBurnRateHigh",
+          "severity": "warning"
+        },
+        "annotations": {
+          "description": "Tốc độ chi tiêu hiện tại: $7.92/giờ",
+          "summary": "Chi phí LLM đang vượt $2/giờ"
+        },
+        "state": "firing",
+        "activeAt": "2026-11-26T06:34:37.571501534Z",
+        "value": "7.920422819245507e+00"
+      }
+    ]
+  }
+}

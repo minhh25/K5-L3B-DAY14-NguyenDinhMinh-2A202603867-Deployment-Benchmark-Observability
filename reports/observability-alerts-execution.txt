@@ -1,0 +1,25 @@
+AB AgentHighErrorRate firing after 118.2 seconds
+AB AgentHighLatencyP95 firing after 173.6 seconds
+Traceback (most recent call last):
+  File "/Users/minh25/Documents/AI Thuc chien Vin/LAB/K5-L3B-DAY14-NguyenDinhMinh-2A202603867-Deployment-Benchmark-Observability/scripts/run_observability.py", line 194, in <module>
+    globals()[p.parse_args().phase]()
+  File "/Users/minh25/Documents/AI Thuc chien Vin/LAB/K5-L3B-DAY14-NguyenDinhMinh-2A202603867-Deployment-Benchmark-Observability/scripts/run_observability.py", line 146, in alerts
+    collect_traces()
+  File "/Users/minh25/Documents/AI Thuc chien Vin/LAB/K5-L3B-DAY14-NguyenDinhMinh-2A202603867-Deployment-Benchmark-Observability/scripts/run_observability.py", line 86, in collect_traces
+    data=request('/api/traces?service=observable-agent&limit=200&lookback=1h',base='http://127.0.0.1:16686')['data']
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/minh25/Documents/AI Thuc chien Vin/LAB/K5-L3B-DAY14-NguyenDinhMinh-2A202603867-Deployment-Benchmark-Observability/scripts/run_observability.py", line 36, in request
+    return httpx.get(base+path,timeout=15).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/minh25/Documents/AI Thuc chien Vin/LAB/K5-L3B-DAY14-NguyenDinhMinh-2A202603867-Deployment-Benchmark-Observability/.venv/lib/python3.11/site-packages/httpx/_models.py", line 766, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 5 (char 4)
+
+RECOVERED: export changed to supported Jaeger API v3; streaming envelopes decoded.
+Both selected traces exported and correlated to JSON logs: {"slow": "12423ed3f9fbe7f322177fcb43f9460f", "error": "33f625461381f8e3708f5a173070738d"}

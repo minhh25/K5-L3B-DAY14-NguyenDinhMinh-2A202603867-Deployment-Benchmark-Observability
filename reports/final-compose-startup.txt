@@ -1,0 +1,75 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [agent internal] load build definition from Dockerfile
+#1 transferring dockerfile: 924B done
+#1 DONE 0.0s
+
+#2 [agent internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 1.5s
+
+#3 [agent internal] load .dockerignore
+#3 transferring context: 224B 0.0s done
+#3 DONE 0.0s
+
+#4 [agent internal] load build context
+#4 transferring context: 702B 0.0s done
+#4 DONE 0.1s
+
+#5 [agent builder 1/4] FROM docker.io/library/python:3.11-slim@sha256:61e01f72680f86a5279ad510818ab7b2ee9f049822589d4e34e33e044360356c
+#5 resolve docker.io/library/python:3.11-slim@sha256:61e01f72680f86a5279ad510818ab7b2ee9f049822589d4e34e33e044360356c
+#5 resolve docker.io/library/python:3.11-slim@sha256:61e01f72680f86a5279ad510818ab7b2ee9f049822589d4e34e33e044360356c 0.1s done
+#5 DONE 0.1s
+
+#6 [agent builder 4/4] RUN python -m venv /opt/venv && /opt/venv/bin/pip install --no-cache-dir -r requirements.txt
+#6 CACHED
+
+#7 [agent runtime 4/6] COPY --from=builder /opt/venv /opt/venv
+#7 CACHED
+
+#8 [agent runtime 3/6] WORKDIR /app
+#8 CACHED
+
+#9 [agent builder 2/4] WORKDIR /build
+#9 CACHED
+
+#10 [agent runtime 2/6] RUN groupadd --system appuser && useradd --system --gid appuser appuser
+#10 CACHED
+
+#11 [agent builder 3/4] COPY requirements.txt .
+#11 CACHED
+
+#12 [agent runtime 5/6] COPY --chown=appuser:appuser app ./app
+#12 CACHED
+
+#13 [agent runtime 6/6] COPY --chown=appuser:appuser utils ./utils
+#13 CACHED
+
+#14 [agent] exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:92edf847b3706751be684e8eec51866f6bbc8df527c2f6b4c905b0fae7b4887f 0.0s done
+#14 exporting config sha256:b29da3994670537d56ede21004f4798741c344d7cede2eaccc37e36adbedc8d9 0.0s done
+#14 exporting attestation manifest sha256:781aa1e4523c2496e1b82995cad3af86f1589ecc8d7774ff6023ac220a574ae4 0.0s done
+#14 exporting manifest list sha256:06dea1e0bef90dab8587fb7d15c985a1b3ed5b88c392be32d852655ead744dc8
+#14 exporting manifest list sha256:06dea1e0bef90dab8587fb7d15c985a1b3ed5b88c392be32d852655ead744dc8 0.0s done
+#14 naming to docker.io/library/k5-day14-final-agent:latest done
+#14 unpacking to docker.io/library/k5-day14-final-agent:latest
+#14 unpacking to docker.io/library/k5-day14-final-agent:latest 1.9s done
+#14 DONE 2.0s
+
+#15 [agent] resolving provenance for metadata file
+#15 DONE 0.0s
+ agent  Built
+ Network k5-day14-final_default  Creating
+ Network k5-day14-final_default  Created
+ Volume "k5-day14-final_redis_data"  Creating
+ Volume "k5-day14-final_redis_data"  Created
+ Container k5-day14-final-redis-1  Creating
+ Container k5-day14-final-redis-1  Created
+ Container k5-day14-final-agent-1  Creating
+ Container k5-day14-final-agent-1  Created
+ Container k5-day14-final-redis-1  Starting
+ Container k5-day14-final-redis-1  Started
+ Container k5-day14-final-redis-1  Waiting
+ Container k5-day14-final-redis-1  Healthy
+ Container k5-day14-final-agent-1  Starting
+ Container k5-day14-final-agent-1  Started

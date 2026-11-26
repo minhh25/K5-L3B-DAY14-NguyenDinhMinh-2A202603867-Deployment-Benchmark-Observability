@@ -1,15 +1,21 @@
-"""
-Kết nối Redis dùng chung cho rate limiter và cost guard.
+"""Lazy Redis connections: a missing dependency must not break liveness."""
+import hashlib
+import redis
+from fastapi import HTTPException
+from app.config import settings
 
-Yêu cầu:
-  • Đọc REDIS_URL từ config
-  • App vẫn phải KHỞI ĐỘNG ĐƯỢC khi Redis chưa sẵn sàng (đừng ping Redis lúc import)
-  • redis_healthy() dùng cho GET /ready: Redis không kết nối được → False
-"""
+r = redis.from_url(settings.redis_url, decode_responses=True,
+                   socket_connect_timeout=1, socket_timeout=1)
 
-r = None  # TODO: tạo client, vd redis.from_url(settings.redis_url, decode_responses=True)
-
+def state_prefix(api_key: str | None = None) -> str:
+    digest = hashlib.sha256((api_key or settings.agent_api_key).encode()).hexdigest()
+    return f"day14:{settings.environment}:{digest}"
 
 def redis_healthy() -> bool:
-    # TODO: ping Redis; lỗi kết nối → False
-    return False
+    try:
+        return bool(r.ping())
+    except redis.RedisError:
+        return False
+
+def dependency_unavailable() -> HTTPException:
+    return HTTPException(status_code=503, detail="State store unavailable; please retry")

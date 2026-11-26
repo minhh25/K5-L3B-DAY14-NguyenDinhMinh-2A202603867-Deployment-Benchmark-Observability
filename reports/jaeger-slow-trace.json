@@ -1,0 +1,304 @@
+{
+  "traceID": "12423ed3f9fbe7f322177fcb43f9460f",
+  "spans": [
+    {
+      "operationName": "agent.retrieve_context",
+      "duration": 20914.625,
+      "tags": [
+        {
+          "key": "retrieval.documents",
+          "value": "1"
+        }
+      ],
+      "events": [],
+      "otlp": {
+        "traceId": "12423ed3f9fbe7f322177fcb43f9460f",
+        "spanId": "ac6c937b6a51f61c",
+        "parentSpanId": "f9cdc27a79f9f76c",
+        "flags": 256,
+        "name": "agent.retrieve_context",
+        "kind": 1,
+        "startTimeUnixNano": "1795674741191399676",
+        "endTimeUnixNano": "1795674741212314301",
+        "attributes": [
+          {
+            "key": "retrieval.documents",
+            "value": {
+              "intValue": "1"
+            }
+          }
+        ],
+        "status": {}
+      }
+    },
+    {
+      "operationName": "chat mock-llm-small",
+      "duration": 1773953.876,
+      "tags": [
+        {
+          "key": "gen_ai.operation.name",
+          "value": "chat"
+        },
+        {
+          "key": "gen_ai.provider.name",
+          "value": "mock"
+        },
+        {
+          "key": "gen_ai.request.model",
+          "value": "mock-llm-small"
+        },
+        {
+          "key": "gen_ai.usage.input_tokens",
+          "value": "95"
+        },
+        {
+          "key": "gen_ai.usage.output_tokens",
+          "value": "55"
+        },
+        {
+          "key": "llm.cost_usd",
+          "value": 4.7249999999999997e-05
+        }
+      ],
+      "events": [],
+      "otlp": {
+        "traceId": "12423ed3f9fbe7f322177fcb43f9460f",
+        "spanId": "41ca57ac2d61aa51",
+        "parentSpanId": "f9cdc27a79f9f76c",
+        "flags": 256,
+        "name": "chat mock-llm-small",
+        "kind": 1,
+        "startTimeUnixNano": "1795674741212530092",
+        "endTimeUnixNano": "1795674742986483968",
+        "attributes": [
+          {
+            "key": "gen_ai.operation.name",
+            "value": {
+              "stringValue": "chat"
+            }
+          },
+          {
+            "key": "gen_ai.provider.name",
+            "value": {
+              "stringValue": "mock"
+            }
+          },
+          {
+            "key": "gen_ai.request.model",
+            "value": {
+              "stringValue": "mock-llm-small"
+            }
+          },
+          {
+            "key": "gen_ai.usage.input_tokens",
+            "value": {
+              "intValue": "95"
+            }
+          },
+          {
+            "key": "gen_ai.usage.output_tokens",
+            "value": {
+              "intValue": "55"
+            }
+          },
+          {
+            "key": "llm.cost_usd",
+            "value": {
+              "doubleValue": 4.7249999999999997e-05
+            }
+          }
+        ],
+        "status": {}
+      }
+    },
+    {
+      "operationName": "agent.run",
+      "duration": 1795312.667,
+      "tags": [
+        {
+          "key": "agent.question.length",
+          "value": "54"
+        },
+        {
+          "key": "agent.version",
+          "value": "v2"
+        }
+      ],
+      "events": [],
+      "otlp": {
+        "traceId": "12423ed3f9fbe7f322177fcb43f9460f",
+        "spanId": "f9cdc27a79f9f76c",
+        "parentSpanId": "5a34953f382647b3",
+        "flags": 256,
+        "name": "agent.run",
+        "kind": 1,
+        "startTimeUnixNano": "1795674741191353051",
+        "endTimeUnixNano": "1795674742986665718",
+        "attributes": [
+          {
+            "key": "agent.question.length",
+            "value": {
+              "intValue": "54"
+            }
+          },
+          {
+            "key": "agent.version",
+            "value": {
+              "stringValue": "v2"
+            }
+          }
+        ],
+        "status": {}
+      }
+    },
+    {
+      "operationName": "POST /ask",
+      "duration": 1838870.293,
+      "tags": [
+        {
+          "key": "http.flavor",
+          "value": "1.1"
+        },
+        {
+          "key": "http.host",
+          "value": "172.21.0.6:8000"
+        },
+        {
+          "key": "http.method",
+          "value": "POST"
+        },
+        {
+          "key": "http.route",
+          "value": "/ask"
+        },
+        {
+          "key": "http.scheme",
+          "value": "http"
+        },
+        {
+          "key": "http.server_name",
+          "value": "nginx"
+        },
+        {
+          "key": "http.status_code",
+          "value": "200"
+        },
+        {
+          "key": "http.target",
+          "value": "/ask"
+        },
+        {
+          "key": "http.url",
+          "value": "http://nginx/ask"
+        },
+        {
+          "key": "http.user_agent",
+          "value": "python-requests/2.34.2"
+        },
+        {
+          "key": "net.host.port",
+          "value": "8000"
+        },
+        {
+          "key": "net.peer.ip",
+          "value": "172.21.0.9"
+        },
+        {
+          "key": "net.peer.port",
+          "value": "44686"
+        }
+      ],
+      "events": [],
+      "otlp": {
+        "traceId": "12423ed3f9fbe7f322177fcb43f9460f",
+        "spanId": "5a34953f382647b3",
+        "flags": 256,
+        "name": "POST /ask",
+        "kind": 2,
+        "startTimeUnixNano": "1795674741189079884",
+        "endTimeUnixNano": "1795674743027950177",
+        "attributes": [
+          {
+            "key": "http.flavor",
+            "value": {
+              "stringValue": "1.1"
+            }
+          },
+          {
+            "key": "http.host",
+            "value": {
+              "stringValue": "172.21.0.6:8000"
+            }
+          },
+          {
+            "key": "http.method",
+            "value": {
+              "stringValue": "POST"
+            }
+          },
+          {
+            "key": "http.route",
+            "value": {
+              "stringValue": "/ask"
+            }
+          },
+          {
+            "key": "http.scheme",
+            "value": {
+              "stringValue": "http"
+            }
+          },
+          {
+            "key": "http.server_name",
+            "value": {
+              "stringValue": "nginx"
+            }
+          },
+          {
+            "key": "http.status_code",
+            "value": {
+              "intValue": "200"
+            }
+          },
+          {
+            "key": "http.target",
+            "value": {
+              "stringValue": "/ask"
+            }
+          },
+          {
+            "key": "http.url",
+            "value": {
+              "stringValue": "http://nginx/ask"
+            }
+          },
+          {
+            "key": "http.user_agent",
+            "value": {
+              "stringValue": "python-requests/2.34.2"
+            }
+          },
+          {
+            "key": "net.host.port",
+            "value": {
+              "intValue": "8000"
+            }
+          },
+          {
+            "key": "net.peer.ip",
+            "value": {
+              "stringValue": "172.21.0.9"
+            }
+          },
+          {
+            "key": "net.peer.port",
+            "value": {
+              "intValue": "44686"
+            }
+          }
+        ],
+        "status": {}
+      }
+    }
+  ]
+}

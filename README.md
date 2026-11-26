@@ -1,5 +1,10 @@
 # Day 14 — Deployment, Benchmark & Observability
 
+> **Bài làm đã triển khai local:** xem [RUN_LAB.md](RUN_LAB.md),
+> [MISSION_ANSWERS.md](MISSION_ANSWERS.md) và [BENCHMARK_REPORT.md](BENCHMARK_REPORT.md).
+> Agent Part 6 đạt `PASS 12/12` trong lần kiểm tra đầy đủ có Docker;
+> deploy Render/URL public được để lại theo yêu cầu, hướng dẫn tại [DEPLOYMENT.md](DEPLOYMENT.md).
+
 > Đưa agent lên cloud, đo xem nó nhanh và đúng tới đâu, rồi giám sát nó khi chạy thật.
 
 > **AICB-P1 · VinUniversity 2026**  

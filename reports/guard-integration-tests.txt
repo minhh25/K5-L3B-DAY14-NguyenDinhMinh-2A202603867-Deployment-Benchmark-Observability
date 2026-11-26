@@ -1,0 +1,9 @@
+test_actual_cost_reconciles_the_reservation (test_guards.AtomicGuards.test_actual_cost_reconciles_the_reservation) ... ok
+test_budget_reservations_cannot_overspend (test_guards.AtomicGuards.test_budget_reservations_cannot_overspend) ... ok
+test_expired_requests_leave_the_window (test_guards.AtomicGuards.test_expired_requests_leave_the_window) ... ok
+test_sliding_window_is_shared_and_atomic (test_guards.AtomicGuards.test_sliding_window_is_shared_and_atomic) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.038s
+
+OK

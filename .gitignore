@@ -20,6 +20,8 @@ build/
 venv/
 env/
 .venv/
+.runtime/
+node_modules/
 
 # ── IDE ──────────────────────────────��────────────────────
 .vscode/

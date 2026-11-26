@@ -1,0 +1,10 @@
+{
+  "config": {
+    "MOCK_ERROR_RATE": 0.2,
+    "MOCK_SLOW_RATE": 0.3
+  },
+  "firing_seconds": {
+    "AgentHighErrorRate": 118.2,
+    "AgentHighLatencyP95": 173.6
+  }
+}

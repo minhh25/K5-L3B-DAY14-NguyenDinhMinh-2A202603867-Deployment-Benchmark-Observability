@@ -28,6 +28,10 @@ HTTP_LATENCY = Histogram(
 IN_FLIGHT = Gauge(
     "agent_in_flight_requests", "Số request đang xử lý",
 )
+QUESTION_LENGTH = Histogram(
+    "agent_question_length_chars", "Độ dài câu hỏi (ký tự)",
+    buckets=(20, 50, 100, 200, 500, 1000, 2000),
+)
 LLM_REQUESTS = Counter(
     "llm_requests_total", "Số lần gọi LLM",
     ["model", "status"],

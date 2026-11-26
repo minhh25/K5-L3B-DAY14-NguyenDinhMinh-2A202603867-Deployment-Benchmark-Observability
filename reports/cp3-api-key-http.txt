@@ -1,0 +1,16 @@
+NO KEY
+HTTP/1.1 401 Unauthorized
+date: Thu, 26 Nov 2026 06:11:06 GMT
+server: uvicorn
+content-length: 67
+content-type: application/json
+
+{"detail":"Missing API key. Include header: X-API-Key: <your-key>"}
+VALID KEY (redacted)
+HTTP/1.1 200 OK
+date: Thu, 26 Nov 2026 06:11:06 GMT
+server: uvicorn
+content-length: 114
+content-type: application/json
+
+{"question":"Hello","answer":"Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé."}

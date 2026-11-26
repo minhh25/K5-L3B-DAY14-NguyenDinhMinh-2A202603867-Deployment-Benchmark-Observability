@@ -1,0 +1,167 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [agent internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.27kB done
+#1 DONE 0.0s
+
+#2 [agent internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 0.8s
+
+#3 [agent internal] load .dockerignore
+#3 transferring context: 485B done
+#3 DONE 0.0s
+
+#4 [agent builder 1/5] FROM docker.io/library/python:3.11-slim@sha256:61e01f72680f86a5279ad510818ab7b2ee9f049822589d4e34e33e044360356c
+#4 resolve docker.io/library/python:3.11-slim@sha256:61e01f72680f86a5279ad510818ab7b2ee9f049822589d4e34e33e044360356c 0.0s done
+#4 DONE 0.0s
+
+#5 [agent internal] load build context
+#5 transferring context: 459B done
+#5 DONE 0.0s
+
+#6 [agent runtime 2/8] RUN groupadd -r appuser && useradd -r -g appuser appuser
+#6 CACHED
+
+#7 [agent runtime 6/8] RUN mkdir -p /app/utils
+#7 CACHED
+
+#8 [agent runtime 3/8] WORKDIR /app
+#8 CACHED
+
+#9 [agent runtime 5/8] COPY 02-docker/production/main.py .
+#9 CACHED
+
+#10 [agent builder 3/5] RUN apt-get update && apt-get install -y     gcc     libpq-dev     && rm -rf /var/lib/apt/lists/*
+#10 CACHED
+
+#11 [agent builder 5/5] RUN pip install --no-cache-dir --user -r requirements.txt
+#11 CACHED
+
+#12 [agent runtime 7/8] COPY utils/mock_llm.py /app/utils/mock_llm.py
+#12 CACHED
+
+#13 [agent runtime 4/8] COPY --from=builder /root/.local /home/appuser/.local
+#13 CACHED
+
+#14 [agent builder 4/5] COPY 02-docker/production/requirements.txt .
+#14 CACHED
+
+#15 [agent builder 2/5] WORKDIR /app
+#15 CACHED
+
+#16 [agent runtime 8/8] RUN chown -R appuser:appuser /app
+#16 CACHED
+
+#17 [agent] exporting to image
+#17 exporting layers done
+#17 exporting manifest sha256:99da2814a70850109b58d655fc721839a66a7f021d88ff0cb3792f9fc600036c 0.0s done
+#17 exporting config sha256:31ceeca214fb3b84b654abffdd47dfe7ca3f71375babd5950b66fb5809c4136d done
+#17 exporting attestation manifest sha256:4a2e821246411d7601ad15d9017ace2bbdee51f80d45e9b7d7e4f1d73f7167fe 0.0s done
+#17 exporting manifest list sha256:bdca9056de24400c240eef0fd76478f6bf4fb82948c8fc6a9b9cc82cea3ecd8d
+#17 exporting manifest list sha256:bdca9056de24400c240eef0fd76478f6bf4fb82948c8fc6a9b9cc82cea3ecd8d done
+#17 naming to docker.io/library/k5-day14-docker-agent:latest done
+#17 unpacking to docker.io/library/k5-day14-docker-agent:latest done
+#17 DONE 0.1s
+
+#18 [agent] resolving provenance for metadata file
+#18 DONE 0.0s
+time="2026-11-26T13:11:40+07:00" level=warning msg="/Users/minh25/Documents/AI Thuc chien Vin/LAB/K5-L3B-DAY14-NguyenDinhMinh-2A202603867-Deployment-Benchmark-Observability/02-docker/production/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ nginx Pulling 
+ qdrant Pulling 
+ 4f4fb700ef54 Pulling fs layer 
+ 9230f96b2b88 Pulling fs layer 
+ b9e123b8b5e4 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ b71e74f79f33 Pulling fs layer 
+ 26070551e657 Pulling fs layer 
+ 413f74a5bb00 Pulling fs layer 
+ 2670da26f70e Pulling fs layer 
+ b2caeaf63f1b Pulling fs layer 
+ bbafeec41f96 Pulling fs layer 
+ 1a46f3b7807f Pulling fs layer 
+ e7bda7a8a837 Pulling fs layer 
+ 6d14a3e596f2 Pulling fs layer 
+ b90627b8f429 Pulling fs layer 
+ a92e12d42cfd Pulling fs layer 
+ ae710004b1ed Pulling fs layer 
+ cb328168f337 Pulling fs layer 
+ 4f4fb700ef54 Already exists 
+ e7bda7a8a837 Download complete 
+ b2caeaf63f1b Download complete 
+ b71e74f79f33 Download complete 
+ bbafeec41f96 Downloading [==========>                                        ]  4.194MB/20.11MB
+ bbafeec41f96 Downloading [=======================>                           ]  9.437MB/20.11MB
+ bbafeec41f96 Downloading [=======================================>           ]  15.73MB/20.11MB
+ 413f74a5bb00 Download complete 
+ ae710004b1ed Download complete 
+ cb328168f337 Download complete 
+ 1a46f3b7807f Download complete 
+ bbafeec41f96 Download complete 
+ a92e12d42cfd Download complete 
+ b90627b8f429 Downloading [============>                                      ]  1.049MB/4.191MB
+ 6d14a3e596f2 Downloading [===========>                                       ]  1.049MB/4.736MB
+ 2670da26f70e Downloading [===============>                                   ]  1.049MB/3.394MB
+ b9e123b8b5e4 Downloading [===========================>                       ]  1.049MB/1.933MB
+ 26070551e657 Downloading [=>                                                 ]  1.049MB/29.16MB
+ 6d14a3e596f2 Downloading [======================>                            ]  2.097MB/4.736MB
+ b90627b8f429 Downloading [=========================>                         ]  2.097MB/4.191MB
+ b9e123b8b5e4 Download complete 
+ 26070551e657 Downloading [===>                                               ]  2.097MB/29.16MB
+ 2670da26f70e Downloading [==============================>                    ]  2.097MB/3.394MB
+ 9230f96b2b88 Downloading [==>                                                ]  1.049MB/23.81MB
+ 6d14a3e596f2 Downloading [=================================>                 ]  3.146MB/4.736MB
+ b90627b8f429 Downloading [=====================================>             ]  3.146MB/4.191MB
+ 2670da26f70e Download complete 
+ 9230f96b2b88 Downloading [======>                                            ]  3.146MB/23.81MB
+ 26070551e657 Downloading [=====>                                             ]  3.146MB/29.16MB
+ 9230f96b2b88 Downloading [========>                                          ]  4.194MB/23.81MB
+ 26070551e657 Downloading [=======>                                           ]  4.194MB/29.16MB
+ b90627b8f429 Download complete 
+ 6d14a3e596f2 Download complete 
+ 9230f96b2b88 Downloading [===========>                                       ]  5.243MB/23.81MB
+ 26070551e657 Downloading [==========>                                        ]  6.291MB/29.16MB
+ 9230f96b2b88 Downloading [===============>                                   ]   7.34MB/23.81MB
+ 26070551e657 Downloading [==============>                                    ]  8.389MB/29.16MB
+ 26070551e657 Downloading [================>                                  ]  9.437MB/29.16MB
+ 9230f96b2b88 Downloading [===================>                               ]  9.437MB/23.81MB
+ 9230f96b2b88 Downloading [==========================>                        ]  12.58MB/23.81MB
+ 26070551e657 Downloading [====================>                              ]   12.1MB/29.16MB
+ 26070551e657 Downloading [=========================>                         ]  14.68MB/29.16MB
+ 9230f96b2b88 Downloading [=================================>                 ]  15.73MB/23.81MB
+ nginx Pulled 
+ 9230f96b2b88 Downloading [=======================================>           ]  18.87MB/23.81MB
+ 26070551e657 Downloading [==============================>                    ]  17.83MB/29.16MB
+ 26070551e657 Downloading [===================================>               ]  20.97MB/29.16MB
+ 9230f96b2b88 Downloading [================================================>  ]  23.07MB/23.81MB
+ 26070551e657 Downloading [===========================================>       ]  25.17MB/29.16MB
+ 9230f96b2b88 Download complete 
+ 26070551e657 Downloading [==================================================>]  29.16MB/29.16MB
+ 26070551e657 Download complete 
+ qdrant Pulled 
+ agent  Built
+ Network k5-day14-docker_internal  Creating
+ Network k5-day14-docker_internal  Created
+ Volume "k5-day14-docker_qdrant_data"  Creating
+ Volume "k5-day14-docker_qdrant_data"  Created
+ Volume "k5-day14-docker_redis_data"  Creating
+ Volume "k5-day14-docker_redis_data"  Created
+ Container k5-day14-docker-redis-1  Creating
+ Container k5-day14-docker-qdrant-1  Creating
+ Container k5-day14-docker-qdrant-1  Created
+ Container k5-day14-docker-redis-1  Created
+ Container k5-day14-docker-agent-1  Creating
+ Container k5-day14-docker-agent-1  Created
+ Container k5-day14-docker-nginx-1  Creating
+ Container k5-day14-docker-nginx-1  Created
+ Container k5-day14-docker-qdrant-1  Starting
+ Container k5-day14-docker-redis-1  Starting
+ Container k5-day14-docker-redis-1  Started
+ Container k5-day14-docker-qdrant-1  Started
+ Container k5-day14-docker-qdrant-1  Waiting
+ Container k5-day14-docker-redis-1  Waiting
+ Container k5-day14-docker-qdrant-1  Healthy
+ Container k5-day14-docker-redis-1  Healthy
+ Container k5-day14-docker-agent-1  Starting
+ Container k5-day14-docker-agent-1  Started
+ Container k5-day14-docker-nginx-1  Starting
+ Container k5-day14-docker-nginx-1  Started

@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+date: Thu, 26 Nov 2026 06:11:09 GMT
+server: uvicorn
+content-length: 185
+content-type: application/json
+
+{"status":"ok","uptime_seconds":0.3,"version":"1.0.0","environment":"development","timestamp":"2026-11-26T06:11:09.889628+00:00","checks":{"memory":{"status":"ok","used_percent":82.0}}}
+HTTP/1.1 200 OK
+date: Thu, 26 Nov 2026 06:11:09 GMT
+server: uvicorn
+content-length: 37
+content-type: application/json
+
+{"ready":true,"in_flight_requests":1}
+IN-FLIGHT REQUEST
+HTTP/1.1 200 OK
+date: Thu, 26 Nov 2026 06:11:09 GMT
+server: uvicorn
+content-length: 95
+content-type: application/json
+
+{"answer":"Agent đang hoạt động tốt! (mock response) Hỏi thêm câu hỏi đi nhé."}
+Process exit code: -15

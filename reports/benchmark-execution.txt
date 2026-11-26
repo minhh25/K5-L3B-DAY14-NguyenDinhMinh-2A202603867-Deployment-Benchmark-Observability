@@ -1,0 +1,22 @@
+Running: eval/run_eval.py --url http://127.0.0.1:8001 --out reports/eval_v1.json
+{"accuracy": 0.0435, "quality_gate": {"min_accuracy": 0.8, "regressions": [], "passed": false}}
+Running: eval/run_eval.py --url http://127.0.0.1:8002 --baseline reports/eval_v1.json --out reports/eval_v2.json
+{"accuracy": 0.913, "quality_gate": {"min_accuracy": 0.8, "regressions": [], "passed": true}}
+Running: load_test.py --url http://127.0.0.1:8002 --requests 300 --concurrency 1 --out reports/load_v2_c1.json
+{"rps": 4.54, "error_rate": 0.0133, "slo": {"p95_ms": 500, "error_rate": 0.02, "passed": true}}
+Running: load_test.py --url http://127.0.0.1:8002 --requests 300 --concurrency 10 --out reports/load_v2_c10.json
+{"rps": 35.84, "error_rate": 0.0133, "slo": {"p95_ms": 500, "error_rate": 0.02, "passed": true}}
+Running: load_test.py --url http://127.0.0.1:8002 --requests 300 --concurrency 50 --out reports/load_v2_c50.json
+{"rps": 97.28, "error_rate": 0.0133, "slo": {"p95_ms": 500, "error_rate": 0.02, "passed": false}}
+Running: load_test.py --url http://127.0.0.1:8002 --requests 300 --concurrency 100 --out reports/load_v2_c100.json
+{"rps": 41.29, "error_rate": 0.01, "slo": {"p95_ms": 500, "error_rate": 0.02, "passed": false}}
+Running: load_test.py --url http://127.0.0.1:8002 --requests 300 --concurrency 20 --out reports/load_v2_slow_0.json
+{"rps": 99.55, "error_rate": 0.01, "slo": {"p95_ms": 500, "error_rate": 0.02, "passed": true}}
+Running: load_test.py --url http://127.0.0.1:8002 --requests 300 --concurrency 20 --out reports/load_v2_slow_0.03.json
+{"rps": 86.99, "error_rate": 0.01, "slo": {"p95_ms": 500, "error_rate": 0.02, "passed": true}}
+Running: load_test.py --url http://127.0.0.1:8002 --requests 300 --concurrency 20 --out reports/load_v2_slow_0.1.json
+{"rps": 41.4, "error_rate": 0.01, "slo": {"p95_ms": 500, "error_rate": 0.02, "passed": false}}
+Running: eval/run_eval.py --url http://127.0.0.1:8002 --min-accuracy 1.0 --baseline reports/eval_v2.json --out reports/eval_v2_fixed.json
+{"accuracy": 1.0, "quality_gate": {"min_accuracy": 1.0, "regressions": [], "passed": true}}
+Running: eval/run_eval.py --url http://127.0.0.1:8001 --baseline reports/eval_v2_fixed.json --out reports/eval_regression.json
+{"accuracy": 0.0435, "quality_gate": {"min_accuracy": 0.8, "regressions": ["docker-01", "docker-02", "probe-01", "probe-02", "reliability-01", "config-01", "security-01", "security-02", "scaling-01", "scaling-02", "scaling-03", "bench-01", "bench-02", "obs-01", "obs-02", "obs-03", "obs-04", "obs-05", "obs-06", "slo-01", "cost-01", "cloud-01"], "passed": false}}

@@ -114,6 +114,18 @@ KNOWLEDGE_BASE: list[tuple[list[str], str]] = [
      "bạn chỉ cần cung cấp image và biến môi trường."),
 ]
 
+# Keep the original knowledge base reproducible for the before/after benchmark.
+# Default is the repaired KB; use MOCK_KB_PATCHES=0 only to measure the baseline.
+if os.getenv("MOCK_KB_PATCHES", "1") == "1":
+    KNOWLEDGE_BASE.extend([
+        (["jwt", "api key"],
+         "JWT là token có payload, thời gian hết hạn và chữ ký để server kiểm chứng. "
+         "API key là chuỗi bí mật dùng để xác thực client; cần chủ động quản lý và rotate key."),
+        (["kubernetes hpa", "hpa"],
+         "Kubernetes HPA tự scale số replica dựa trên CPU, memory hoặc custom metrics "
+         "như request rate và độ dài hàng đợi, theo target được cấu hình."),
+    ])
+
 # Agent v1 không có retrieval → chỉ "biết" vài câu chung chung như mock cũ
 V1_RESPONSES = {
     "docker": "Container là cách đóng gói app để chạy ở mọi nơi. Build once, run anywhere!",
